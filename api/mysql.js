@@ -4,14 +4,34 @@ const mydbinfo = require("./dbconfig.json")
 
 const mysqlapi = express.Router();
 
-
 mysqlapi.use(express.json())
 mysqlapi.use(express.urlencoded({ extended: true }))
 
-mysqlapi.post('/', (req, res) => {
+const myconnection = mysql.createPool(mydbinfo)
 
-    res.send("next로 잘 연결되었나?")
+mysqlapi.get('/:tablenm', (req, res) => {
+    const tablenm = req.params.tablenm
+    myconnection.getConnection((err, connect) => {
+        if (err) throw console.log("DB접속정보확인 " + err)
+        connect.query(`select * from ${tablenm}`, (error, result) => {
+            if (error) throw console.log("쿼리문 오류")
+            res.send(result)
+        })
+    })
 })
+
+// mysqlapi.get('/:tablenm/:pk', (req, res) => {
+//     const tablenm = req.params.tablenm
+//     const pk = req.params.pk
+//     const wheretable = ` where pk = ${pk}`
+//     myconnection.getConnection((err, connect) => {
+//         if (err) throw console.log("DB접속정보확인 " + err)
+//         connect.query(`select * from ${tablenm} ${wheretable}`, (error, result) => {
+//             if (error) throw console.log("쿼리문 오류")
+//             res.send(result)
+//         })
+//     })
+// })
 
 
 module.exports = mysqlapi;
