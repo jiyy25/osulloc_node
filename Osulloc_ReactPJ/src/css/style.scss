@@ -1,0 +1,585 @@
+@font-face {
+    font-family: 'seolleimcool-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+$seolFont: 'seolleimcool-SemiBold';
+$Wcolor: #FFFEF1;
+$Bcolor: #1B1B1B;
+$krFont: "Noto Sans KR", sans-serif;
+$nanumFont: "NanumSquare", sans-serif;
+
+.mbt-100 {
+    margin: 100px 0 !important;
+}
+
+.mb-100 {
+    margin-bottom: 100px !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.w-0 {
+    width: 0;
+    white-space: nowrap;
+}
+
+.zup {
+    z-index: 99999;
+}
+
+.small_font {
+    font-size: 16px;
+}
+
+.B_small_font {
+    font-size: 22px;
+}
+
+/////////////////header zone/////////////////
+
+header {
+    font-family: $seolFont;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0.5rem;
+    z-index: 999999;
+    color: $Bcolor;
+
+    .navBtn {
+        width: 35px;
+        height: 30px;
+        background: transparent;
+        border: 0;
+        position: relative;
+
+        i {
+            position: absolute;
+            z-index: 99999;
+            background-color: $Bcolor;
+            display: block;
+            width: 95%;
+            height: 1.8px;
+            transition: 0.5s;
+            background-color: $Wcolor;
+
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+            }
+
+        }
+
+        &.act {
+            i {
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    top: 50%;
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+
+
+    }
+
+
+    ul {
+        margin-bottom: 0;
+    }
+
+
+    .navmn {
+        li {
+            margin: 15px;
+
+        }
+    }
+
+    .icoBox {
+        li {
+            margin: 15px;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .userIco {
+            img {
+                width: 24px;
+            }
+        }
+
+    }
+
+
+    @media (max-width: 992px) {
+        .navBtn i {
+            background-color: $Bcolor;
+        }
+
+        .navmn {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $Wcolor;
+            height: 500px;
+            width: 0;
+            overflow: hidden;
+            padding: 0;
+            transition: .5s;
+            opacity: 0;
+
+            &.Bclick {
+                min-height: 500px;
+                padding: 5rem 2rem;
+                width: 50%;
+                opacity: 1;
+            }
+
+            li {
+                border-bottom: 1px solid $Bcolor;
+
+                a {
+                    display: block;
+                    width: 100px;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+/////////////////////swiper////////////////////
+
+.jyySwiper {
+    font-family: $krFont;
+
+    .imgBox {
+        img {
+            width: 100%;
+        }
+    }
+
+    .swiper-pagination {
+        display: block;
+        align-items: center;
+        bottom: 16px !important;
+
+        .dot {
+            font-size: 0;
+            width: 8px;
+            height: 8px;
+            border: 2px solid $Wcolor;
+            background-color: $Wcolor;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active.dot {
+            width: 13px;
+            height: 13px;
+            background-color: transparent;
+            line-height: 5px;
+        }
+
+    }
+
+    .descBox {
+        strong {
+            display: block;
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+
+    }
+
+    .btnBox {
+
+        .swiperNB,
+        .swiperPB {
+            height: auto;
+            width: auto;
+            margin: 0;
+            padding: 4px 8px;
+            align-items: center;
+            display: flex;
+            z-index: 99999;
+            border: 0;
+            background-color: transparent;
+            transform: translateY(-50%);
+            color: $Wcolor;
+            // background-color: aquamarine;
+
+        }
+
+        .swiperNB::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 2px solid $Wcolor;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(135deg);
+        }
+
+        .swiperPB::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 2px solid $Wcolor;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    @media (max-width:992px) {
+        .btnBox {
+            display: none !important;
+        }
+
+    }
+
+    @media (min-width: 993px) {
+
+        .imgBox {
+            .descBox {
+                margin-top: 30px !important;
+
+                .moreBtn {
+                    position: absolute;
+                    left: 15px;
+                    bottom: -10px;
+                    transform: translateY(5px);
+
+                }
+            }
+
+
+        }
+
+    }
+}
+
+/////////////////Mov///////////////////////
+
+.videoZone {
+    margin-bottom: 96px;
+
+    .video-foreground {
+
+        .main-player {
+            width: 100%;
+            height: 50vw
+        }
+
+        .descBox {
+            color: $Wcolor;
+            bottom: 15%;
+
+        }
+    }
+
+    @media (max-width:992px) {
+        .main-player {
+            position: unset;
+        }
+
+        .panna {
+            font-size: 20px;
+            color: #1B1B1B;
+        }
+    }
+
+    @media (min-width:992px) {
+        .descBox {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+///////////////////BestSeller//////////////////
+
+.BestSeller {
+
+    .bestProduct {
+        text-align: center;
+
+        .productBox {
+            // min-width: 280px;
+            max-width: 294px;
+            min-width: 205px;
+            font-family: $krFont;
+
+            img {
+                width: 100%;
+            }
+
+            .textBox {
+                width: 100%;
+
+                .title {
+                    font-weight: 400;
+                    font-size: 18px !important;
+                }
+
+                .price {
+                    font-weight: 300;
+                    font-size: 18px !important;
+                }
+
+                .title,
+                .price {
+                    display: block;
+                    width: 100%;
+                    font-size: 1rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+
+            .desc {
+                font-size: 14px;
+                display: block;
+                width: 100%;
+                font-size: 1rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-weight: 300;
+            }
+
+        }
+    }
+
+    @media (max-width:992px) {
+
+        .productBox {
+            padding: 0 !important;
+
+        }
+    }
+}
+
+
+//////////////////osullocStory//////////////////
+
+.osullocStory {
+    color: $Wcolor;
+
+    .bgblack {
+        background-color: #00000059;
+        height: 100%;
+
+        .storyTextBox {
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .descP {
+                width: 473px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .storyImg {
+        background: url(/public/img/banner/osulloc22.jpg) 50% center no-repeat;
+        height: 470px;
+        width: auto;
+    }
+}
+
+/////////////BestCategory////////////////////
+.BestCategory {
+    font-family: $krFont;
+
+    .categoryBoxZone {
+        margin: 5rem;
+
+        .cateBox {
+            min-height: 500px;
+            max-height: 550px;
+
+            strong {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                margin: 1rem 0;
+            }
+
+            a {
+                font-size: 1.2rem;
+            }
+        }
+
+
+        .cateBox1 {
+            background: url(/public/img/banner/osulloc39.jpg);
+            background-size: cover;
+            background-position: 30% 50%;
+            background-repeat: no-repeat;
+        }
+
+        .cateBox2 {
+            background: url(/public/img/product/osulloc02.jpg);
+            background-size: cover;
+            background-position: 30% 0%;
+            background-repeat: no-repeat;
+        }
+
+        .cateBox3 {
+            background: url(/public/img/banner/osulloc1_gift.jpg);
+            background-size: cover;
+            background-position: 50% 10%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media (max-width:992px) {
+        padding: 0;
+
+        .categoryBoxZone {
+            margin: 0;
+
+            .cateBox3 {
+                background-position: 75%;
+            }
+        }
+    }
+
+    @media (max-width:740px) {
+        padding: 0;
+
+        .categoryBoxZone {
+            margin: 0;
+
+            .cateBox3 {
+                background: url(/public/img/product/osulloc25.png);
+                background-repeat: no-repeat;
+                background-position: 50% 10%;
+            }
+        }
+    }
+}
+
+
+/////////////////footer////////////////////////
+
+footer {
+    font-weight: 100;
+    font-family: $nanumFont;
+    color: $Wcolor;
+    font-size: 14px;
+
+    span,
+    strong {
+        display: block;
+    }
+
+    .leftDesc {
+        ul {
+            width: 100%;
+            font-size: 16px;
+
+            li {
+                margin: 0 10px;
+                width: auto;
+            }
+        }
+    }
+
+    .qnafooter {
+        .largeF {
+            font-size: 23px;
+        }
+    }
+
+
+    @media (max-width:992px) {
+
+        .largeF {
+            font-size: 21px;
+        }
+
+        .help {
+            font-size: 15px;
+            width: 50%;
+        }
+
+        .mail {
+            width: 50%;
+        }
+    }
+
+    @media (max-width:600px) {
+        .mail {
+            .largeF {
+                font-size: 18px;
+            }
+        }
+
+        .adressdsec {
+            font-size: 11px;
+        }
+    }
+}

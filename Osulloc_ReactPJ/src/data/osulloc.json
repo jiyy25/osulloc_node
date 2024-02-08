@@ -1,0 +1,249 @@
+{
+    "swiper": [
+        {
+            "imgsrc": "https://i.imgur.com/sXXJUwr.jpg",
+            "sm_imgsrc": "https://i.imgur.com/SnkAjZl.jpg",
+            "text": "제주 유채꿀로 묵직하면서도 | 촉촉하게 완성된 달콤함",
+            "sm_text": "제주 말차와 유채꿀로 묵직하고 촉촉한 식감과 | 진한 풍미를 선사하는 프리미엄 말차 카스텔라",
+            "alt": "말차카스텔라 이미지"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/ikBVZVC.jpg",
+            "sm_imgsrc": "https://i.imgur.com/TJdv8FU.jpg",
+            "text": "제주에서 온 차 한잔의 쉼 | 오설록 시그니처 세작",
+            "sm_text": "제주의 흙, 물, 빛, 바람, 안개가 만든 풍미와 | 은은한 향의 녹차를 최대 25% 할인으로 만나보세요",
+            "alt": "오설록세작이미지"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/uWXIgSw.jpg",
+            "sm_imgsrc": "https://i.imgur.com/tYU6vPN.jpg",
+            "text": "오설록만이 지닌 따뜻함 | 설 선물세트 하루 특가 ",
+            "sm_text": "오직 공식몰에서만 최대 50% 할인! | 설에는 오설록으로 따뜻한 마음을 전해보세요.",
+            "alt": "설선물이미지"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/t3IKfW5.jpg",
+            "sm_imgsrc": "https://i.imgur.com/3ITGshx.jpg",
+            "text": "오설록 최고의 티푸드는?",
+            "sm_text": "가장 좋아하는 티푸드를 고르면 | 오설록 케이크를 선물로 드려요!",
+            "alt": "티푸드이벤트이미지"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/hw5ABGf.jpg",
+            "sm_imgsrc": "https://i.imgur.com/NVF2yTo.jpg",
+            "text": "다다일상과 함께 | 즐거운 티 라이프를 누릴 수 있어요.",
+            "sm_text": "오설록 티 소믈리에가 | 그달의 테마와 어울리는 차들을 선정하여 보내드립니다.",
+            "alt": "다다일상이미지"
+        }
+    ],
+    "product": [
+        {
+            "imgsrc": "https://i.imgur.com/QbzUDZN.jpg",
+            "title": "오설록 제주 동백꽃 티 20입 티백 외 9종",
+            "text": "제주 동백꽃 속에 숨겨진 달큰한 향미가 매혹적인 블렌디드 티",
+            "price": "8500",
+            "alt": "제주동백티",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/aMLhgei.jpg",
+            "title": "그린티 랑드샤",
+            "text": "바삭한 랑드샤에 오설록 제주 차밭에서 자란 초록빛 말차의 깊은 풍미를 담은 프리미엄 샌딩 쿠키",
+            "price": "11050",
+            "alt": "그린트티랑드샤",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/fr2Buz5.jpg",
+            "title": "러블리 티 박스 4종 12입",
+            "text": "즐겁고 행복한 티타임을 선사하는 달콤하고 향긋한 오설록만의 특별한 블렌디드 티 선물 세트",
+            "price": "21000",
+            "alt": "러블리티박스",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/O5yiaKk.jpg",
+            "title": "허브티 컬렉션 3종 15입",
+            "text": "남녀노소 즐기기 좋은 오설록 대표 허브티 3종 세트",
+            "price": "26000",
+            "alt": "3종허브티",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/7FJYV4R.jpg",
+            "title": "마스터 블렌드 8종 32입",
+            "text": "마스터의 블렌딩으로 탄생한 오설록만의 제주의 향기를 담은 대표 블렌디드 티 모음 세트",
+            "price": "44000",
+            "alt": "마스터블렌드8종",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/za61kqj.jpg",
+            "title": "콤부차 피치동백&제주영귤 4입",
+            "text": "달콤한 피치동백 & 상큼한 제주영귤 맛의 가볍게 즐기는, 녹차 유래 유산균 SCOBY로 만든 스파클링 콤부차 탄산이 팡 터질 수 있으니 냉장 보관 후 주의해서 열어주세요!",
+            "price": "16000",
+            "alt": "피치동백,제주영귤 콤부차",
+            "category": "combucha"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/8trM6vf.jpg",
+            "title": "찬물녹차, 콤부차 세트",
+            "text": "찬물에서 쉽게 우러나는 부드럽고 깔끔한 스틱형 녹차 아이스티와 탄산 가득 콤부차의 조화!",
+            "price": "21000",
+            "alt": "찬물녹차 콤부타 세트",
+            "category": "combucha"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/Um86LUx.jpg",
+            "title": "콤부차 3종 세트",
+            "text": "당류제로&저칼로리 콤부차 리치피치, 깔라망고맛, 애플파인 총 20입",
+            "price": "24000",
+            "alt": "콤부차3종세트",
+            "category": "combucha"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/Gvti0kQ.jpg",
+            "title": "콤부차 2종 세트",
+            "text": "당류제로&저칼로리 콤부차 리치피치, 깔라망고맛 총 20입",
+            "price": "16000",
+            "alt": "콤부차2종세트",
+            "category": "combucha"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/8trM6vf.jpg",
+            "title": "찬물 녹차&루이보스 티",
+            "text": "찬물에서 쉽게 우러나는 부드럽고 깔끔한 스틱형 녹차 & 루이보스 보리차",
+            "price": "19000",
+            "alt": "찬물녹차,루이보스",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/6zr0Aa4.jpg",
+            "title": "오설록 아이스티 노을섬 1개+산호섬 1개 (총 40입)",
+            "text": "칼로리 부담없이 즐기는 오설록 아이스티",
+            "price": "16900",
+            "alt": "제주 동백티",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/NXG67xV.jpg",
+            "title": "영귤섬 아이스티",
+            "text": "제주 햇살 받고 자란 싱그러운 제주 영귤 아이스티입니다. 찬물에도 잘 우러나와 간편하게 즐기실 수 있습니다",
+            "price": "13000",
+            "alt": "영귤섬 아이스티",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/A5guFG8.jpg",
+            "title": "달빛섬 아이스티",
+            "text": "제주 여름밤의 시원함을 담은 배향 아이스티입니다. 찬물에도 잘 우러나와 간편하게 즐기실 수 있습니다.",
+            "price": "13000",
+            "alt": "달빛섬 아이스티",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/ZPUwAdr.jpg",
+            "title": "히비스커스 선샤인 10입",
+            "text": "히비스커스와 달큰한 과일, 산뜻한 허브의 풍미가 어우러진 블렌디드 허브차",
+            "price": "15000",
+            "alt": "히비스커스선샤인",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/34z5rQU.jpg",
+            "title": "루이보스 퓨어 10입",
+            "text": "붉은 태양을 닮은 깊은 풍미의순수 루이보스차",
+            "price": "15000",
+            "alt": "루이보스퓨어",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/z7MUL1B.jpg",
+            "title": "루이보스 카라멜베리 20입",
+            "text": "달콤하게 즐기는 블렌디드 루이보스차입니다. 티백으로 간편하게, 합리적인 가격으로 즐겨보세요.",
+            "price": "25000",
+            "alt": "루이보스 캬라멜베리",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/Ixn5jvF.jpg",
+            "title": "프리미엄 티 컬렉션 10종 40입",
+            "text": "*NEW 리뉴얼 출시! 취향과 기분에 따라 다채로운 맛과 향을 즐기기 좋은, 알찬 구성의 베스트셀러 티 세트",
+            "price": "23800",
+            "alt": "프리미엄티컬렉션10종",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/6UonfzU.jpg",
+            "title": "제주섬 녹차 아몬드볼",
+            "text": "깊은 풍미의 녹차 초콜릿이 고소한 아몬드를 감싼 프리미엄 디저트",
+            "price": "9000",
+            "alt": "녹차 아몬드볼",
+            "category": "teafood"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/XSwRqFD.jpg",
+            "title": "레드파파야 블랙티 20입",
+            "text": "붉은 장미와 달콤한 파파야가 곁들여진 화려한 풍미의 홍차를 피라미드 티백으로 간편하게, 합리적인 가격으로 즐겨보세요.",
+            "price": "20000",
+            "alt": "레드파파야 블랙티",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/YNbjc28.jpg",
+            "title": "녹차 밀크 스프레드",
+            "text": "최고급 제주 녹차의 깊은 풍미로 다양하게 활용하기 좋은 녹차 스프레드",
+            "price": "9900",
+            "alt": "녹차 밀크 스프레드",
+            "category": "teafood"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/6vKc5XT.png",
+            "title": "마스터 블렌드 8종 32입",
+            "text": "마스터의 블렌딩으로 탄생한 오설록만의 제주의 향기를 담은 대표 블렌디드 티 모음 세트",
+            "price": "44000",
+            "alt": "마스터 블렌드 8종 32입",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/aMLhgei.jpg",
+            "title": "시그니처 비스킷",
+            "text": "진한 초코 비스킷과 깊은 풍미의 녹차 초콜릿이 조화로운 오설록 대표 비스킷",
+            "price": "11050",
+            "alt": "시그니처 비스킷",
+            "category": "teafood"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/KymfRqz.jpg",
+            "title": "프리미엄 말차",
+            "text": "어린 찻잎을 정성껏 갈아 만든 깊은 풍미의 유기농 말차",
+            "price": "23000",
+            "alt": "프리미엄 말차",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/oIA6HB0.jpg",
+            "title": "오설록 티푸드 3종 묶음(그린티 웨하스+얼그레이 웨하스+녹차와플) ",
+            "text": "오설록의 달콤쌉쌀한 시그니처 티푸드를 마음껏 즐기기 좋은 세트",
+            "price": "12500",
+            "alt": "오설록 티푸드 3종 묶음(그린티 웨하스+얼그레이 웨하스+녹차와플)",
+            "category": "teafood"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/oRLj2Ho.jpg",
+            "title": "오설록 제주 화산우롱차 20입 티백 ",
+            "text": "제주의 따뜻한 햇살로 약발효한 부드러운 향미의 우롱차",
+            "price": "9500",
+            "alt": "제주 화산우롱차 20입",
+            "category": "tea"
+        },
+        {
+            "imgsrc": "/img/product/osulloc30.jpg",
+            "title": "제주섬 녹차 라즈베리 트러플",
+            "text": "진한 말차 초콜릿 안에 라즈베리 크림이 가득한 사랑스러운 초콜릿",
+            "price": "13000",
+            "alt": "https://i.imgur.com/PZAFdRV.jpg",
+            "category": "teafood"
+        }
+    ]
+}

@@ -5,13 +5,13 @@ const reactapi = require("./api/reactapi");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, './osu/build')))
+app.use(express.static(path.join(__dirname, './Osulloc_ReactPJ/build')))
 
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, './osu/build/index.html'))
+    res.sendFile(path.join(__dirname, './Osulloc_ReactPJ/build/index.html'))
 })
 
-app.use("/api", reactapi); 
+app.use("/api", reactapi);
 
 app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, './www/nopage.html'))
