@@ -143,18 +143,12 @@ header .icoBox .userIco img {
   }
 }
 
-.jyySwiper {
-  font-family: "Noto Sans KR", sans-serif;
-}
-.jyySwiper .imgBox img {
-  width: 100%;
-}
-.jyySwiper .swiper-pagination {
+.swiper-pagination {
   display: block;
   align-items: center;
   bottom: 16px !important;
 }
-.jyySwiper .swiper-pagination .dot {
+.swiper-pagination .dot {
   font-size: 0;
   width: 8px;
   height: 8px;
@@ -162,11 +156,18 @@ header .icoBox .userIco img {
   background-color: #FFFEF1;
   opacity: 1;
 }
-.jyySwiper .swiper-pagination .swiper-pagination-bullet-active.dot {
+.swiper-pagination .swiper-pagination-bullet-active.dot {
   width: 13px;
   height: 13px;
   background-color: transparent;
   line-height: 5px;
+}
+
+.jyySwiper {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.jyySwiper .imgBox img {
+  width: 100%;
 }
 .jyySwiper .descBox strong {
   display: block;
@@ -385,6 +386,72 @@ header .icoBox .userIco img {
     background-repeat: no-repeat;
     background-position: 50% 10%;
   }
+}
+
+.OsllcocLocation .mySwiper {
+  color: #FFFEF1;
+}
+.OsllcocLocation .mySwiper .textBox {
+  transform: translate(10%, 80%);
+  transition: 0.5s;
+}
+.OsllcocLocation .mySwiper strong {
+  font-family: "seolleimcool-SemiBold";
+  font-size: 1.6rem;
+}
+.OsllcocLocation .mySwiper a {
+  display: block;
+  background-color: #1B1B1B;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 480px;
+  min-height: 375px;
+}
+.OsllcocLocation .mySwiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+.OsllcocLocation .mySwiper .swiper-slide-next a {
+  max-width: 500px;
+  min-height: 395px;
+}
+.OsllcocLocation .mySwiper .swiper-slide-next .textBox {
+  transform: translate(10%, 60%);
+}
+.OsllcocLocation .mySwiper p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.3rem;
+}
+.OsllcocLocation .btnBox .swiperNB,
+.OsllcocLocation .btnBox .swiperPB {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 4px 8px;
+  align-items: center;
+  display: flex;
+  z-index: 99999;
+  border: 0;
+  background-color: transparent;
+  transform: translateY(-50%);
+}
+.OsllcocLocation .btnBox .swiperNB::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 2px solid #1B1B1B;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(135deg);
+}
+.OsllcocLocation .btnBox .swiperPB::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 2px solid #1B1B1B;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg);
 }
 
 footer {

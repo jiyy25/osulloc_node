@@ -5,7 +5,7 @@
   "main": "web.js",
   "scripts": {
     "server": "node ./web.js",
-    "react": "cd Osulloc_ReactPJ && npm run build",
+    "react": "cd osulloc && npm run build",
     "start": "concurrently  \"npm run server\" \"npm run react\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -238,12 +238,49 @@
             "category": "tea"
         },
         {
-            "imgsrc": "/img/product/osulloc30.jpg",
+            "imgsrc": "https://i.imgur.com/PZAFdRV.jpg",
             "title": "제주섬 녹차 라즈베리 트러플",
             "text": "진한 말차 초콜릿 안에 라즈베리 크림이 가득한 사랑스러운 초콜릿",
             "price": "13000",
-            "alt": "https://i.imgur.com/PZAFdRV.jpg",
+            "alt": "녹차 라즈베리 트러플",
             "category": "teafood"
+        }
+    ],
+    "store": [
+        {
+            "imgsrc": "https://i.imgur.com/XUHXjIs.jpg",
+            "location": "오설록 | 티하우스 한남점",
+            "o_desc": "오설록과 페이스갤러리의 협업으로 | 탄생한 예술과 차 애호가를 위한 | 차문화 복합 공간"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/0MvQAdf.jpg",
+            "location": "오설록 | 티하우스 북촌점",
+            "o_desc": "차를 통해 새로운 감각과 | 취향을 보여주는 가치변화의 공간"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/hDDQ3Qd.jpg",
+            "location": "제주 오설록 | 티뮤지엄",
+            "o_desc": "차의 역사와 문화를 체험할 수 있는 | 국내 최대 차 종합 전시관"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/OX78Qn0.jpg",
+            "location": "오설록 | 티하우스 해운대점",
+            "o_desc": "일상에서 벗어나 차의 본질에 집중하며 | 온전한 휴식을 완성하는 공간"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/FHRBHP9.jpg",
+            "location": "오설록 1979",
+            "o_desc": "브랜드의 격을 한 단계 끌어올린 | 오설록의 프리미엄 티룸"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/yLjUfPI.jpg",
+            "location": "오설록 | 티하우스 김포공항점",
+            "o_desc": "‘제주 녹차’ 미식 경험과 함께 | 공항 내 차 한 잔의 휴식을 | 즐기는 공간"
+        },
+        {
+            "imgsrc": "https://i.imgur.com/n0ctX4J.jpg",
+            "location": "오설록 | 티하우스 용산파크점",
+            "o_desc": "캐주얼하면서도 차에 대한 | 전문성을 담은 세련된 공간"
         }
     ]
 }

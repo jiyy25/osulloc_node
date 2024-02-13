@@ -197,6 +197,30 @@ header {
 
 /////////////////////swiper////////////////////
 
+// 공통스와이퍼
+.swiper-pagination {
+    display: block;
+    align-items: center;
+    bottom: 16px !important;
+
+    .dot {
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        border: 2px solid $Wcolor;
+        background-color: $Wcolor;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active.dot {
+        width: 13px;
+        height: 13px;
+        background-color: transparent;
+        line-height: 5px;
+    }
+
+}
+
 .jyySwiper {
     font-family: $krFont;
 
@@ -204,29 +228,6 @@ header {
         img {
             width: 100%;
         }
-    }
-
-    .swiper-pagination {
-        display: block;
-        align-items: center;
-        bottom: 16px !important;
-
-        .dot {
-            font-size: 0;
-            width: 8px;
-            height: 8px;
-            border: 2px solid $Wcolor;
-            background-color: $Wcolor;
-            opacity: 1;
-        }
-
-        .swiper-pagination-bullet-active.dot {
-            width: 13px;
-            height: 13px;
-            background-color: transparent;
-            line-height: 5px;
-        }
-
     }
 
     .descBox {
@@ -520,6 +521,96 @@ header {
             }
         }
     }
+}
+
+//////////////////OsllcocLocation/////////////////
+
+.OsllcocLocation {
+
+    .mySwiper {
+        color: $Wcolor;
+
+        .textBox {
+            transform: translate(10%, 80%);
+            transition: 0.5s;
+        }
+
+        strong {
+            font-family: $seolFont;
+            font-size: 1.6rem;
+        }
+
+        a {
+            display: block;
+            background-color: #1B1B1B;
+            background-size: cover;
+            background-repeat: no-repeat;
+            max-width: 480px;
+            min-height: 375px;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-slide-next {
+            a {
+                max-width: 500px;
+                min-height: 395px;
+            }
+
+            .textBox {
+                transform: translate(10%, 60%);
+            }
+        }
+
+        p {
+            font-family: $krFont;
+            font-size: 1.3rem;
+        }
+    }
+
+    .btnBox {
+
+        .swiperNB,
+        .swiperPB {
+            height: auto;
+            width: auto;
+            margin: 0;
+            padding: 4px 8px;
+            align-items: center;
+            display: flex;
+            z-index: 99999;
+            border: 0;
+            background-color: transparent;
+            transform: translateY(-50%);
+            // background-color: aquamarine;
+
+        }
+
+        .swiperNB::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 2px solid $Bcolor;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(135deg);
+        }
+
+        .swiperPB::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 2px solid $Bcolor;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+    }
+
 }
 
 

@@ -6,13 +6,14 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./component/Header";
 import Swiper from "./component/Swiper";
 
-import datasrc from './data/osulloc.json'
+// import datasrc from './data/osulloc.json'
 import Mov from "./component/Mov";
 import Footer from "./component/Footer";
 import Haesam from "./component/haesam";
 import Bestseller from "./component/Bestseller";
 import Story from "./component/Story";
 import BestCategory from "./component/BestCategory";
+
 
 
 
@@ -104,6 +105,8 @@ function App() {
             <Bestseller datasrc={data.products && data.products}></Bestseller>
             <Story></Story>
             <BestCategory></BestCategory>
+
+
           </>
         }>
 

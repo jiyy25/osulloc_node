@@ -5,10 +5,10 @@ const reactapi = require("./api/reactapi");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, './Osulloc_ReactPJ/build')))
+app.use(express.static(path.join(__dirname, './osulloc/build')))
 
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, './Osulloc_ReactPJ/build/index.html'))
+    res.sendFile(path.join(__dirname, './osulloc/build/index.html'))
 })
 
 app.use("/api", reactapi);
