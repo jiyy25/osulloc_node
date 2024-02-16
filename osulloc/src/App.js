@@ -9,7 +9,7 @@ import Swiper from "./component/Swiper";
 // import datasrc from './data/osulloc.json'
 import Mov from "./component/Mov";
 import Footer from "./component/Footer";
-import Haesam from "./component/haesam";
+import Haesam from "./component/Haesam";
 import Bestseller from "./component/Bestseller";
 import Story from "./component/Story";
 import BestCategory from "./component/BestCategory";
