@@ -15,7 +15,7 @@ function BestCategory() {
     return (
         <div className='BestCategory container mb-100'>
             <BigTitle>베스트 카테고리</BigTitle>
-            <SmallTitle>다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.</SmallTitle>
+            <SmallTitle className='smT'>다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.</SmallTitle>
             <div className='categoryBoxZone row'>
                 <div className='cateBox1 cateBox col-lg-6 col-12' data-aos="flip-left">
                     <div className='mt-5 mx-4'>

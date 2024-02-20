@@ -23,3 +23,16 @@ export const BmoreBtn = styled(MoreBtn)`
         background-color:rgba(0, 0, 0, 0.085);
     }
 `
+
+export const GreenBtn = styled.button`
+    font-family: "Noto Sans KR", sans-serif;
+    width: 320px;
+    border-radius: 10px;
+    background-color: #5A7E62;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    &:hover{
+        background-color:#48644e;
+    }
+`

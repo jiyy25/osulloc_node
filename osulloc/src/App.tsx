@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Route, Routes } from 'react-router-dom';
+
 import Header from './component/Header';
 import Swiper from './component/Swiper';
 import datasrc from './data/osulloc.json';
 import Mov from './component/Mov';
 import Footer from './component/Footer';
-import Haesam from './component/Haesam';
 import Bestseller from './component/Bestseller';
 import Story from './component/Story';
 import BestCategory from './component/BestCategory';
 import Location from './component/Location';
+import Subscribe from "./component/Subscribe";
+import Event from "./router/Event";
+import Shop from "./router/Shop";
+import ShopBest from "./router/ShopBest";
 
 interface SwipeData {
   // Swipe 데이터 타입 정의
@@ -76,10 +80,13 @@ function App(): JSX.Element {
               <Story />
               <BestCategory />
               <Location datasrc={datasrc.store && datasrc.store} />
+              <Subscribe></Subscribe>
             </>
           }
         />
-        <Route path="/event" element={<Haesam />} />
+        <Route path="/event" element={<Event datasrc={datasrc.reveiw} />}></Route>
+        <Route path="/shop/best" element={<ShopBest datasrc={datasrc.product} />}></Route>
+        <Route path="/shop/tea" element={<Shop datasrc={datasrc} />}></Route>
       </Routes>
       <Footer />
     </>

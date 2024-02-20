@@ -5,8 +5,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "DAEAM_LEE_TAE_JOON";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/DAEAM_LEE_TAE_JOON.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 .mbt-100 {
   margin: 100px 0 !important;
+}
+
+.mt-150 {
+  margin-top: 150px !important;
 }
 
 .mb-100 {
@@ -41,7 +51,7 @@ h6 {
 }
 
 .zup {
-  z-index: 99999;
+  z-index: 999999999;
 }
 
 .small_font {
@@ -52,13 +62,26 @@ h6 {
   font-size: 22px;
 }
 
+.containerjy {
+  --bs-gutter-x: 10rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 header {
+  transition: 0.5s;
   font-family: "seolleimcool-SemiBold";
   background-color: transparent;
   font-size: 20px;
   padding: 0.5rem;
   z-index: 999999;
-  color: #1B1B1B;
+}
+header:hover {
+  background-color: #fff;
 }
 header .navBtn {
   width: 35px;
@@ -100,8 +123,79 @@ header .navBtn.act i:nth-child(3) {
 header ul {
   margin-bottom: 0;
 }
+header .backimg::after {
+  content: "";
+  background-image: url("../../public/img/banner/dadaLightPc_1.jpg");
+  background-size: contain;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  z-index: 999999999;
+  right: 100%;
+  top: 0;
+  display: block;
+}
+header .d2li {
+  position: relative;
+}
+header .before::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 0;
+  background-color: #fff;
+  transition: 0.5s;
+}
+header .before:hover::before {
+  height: 250px;
+  border-bottom: 1px solid #ccc;
+}
+header .bnimg {
+  max-height: 0;
+  transition: 0.5s;
+  display: block;
+  position: absolute;
+  width: 400px;
+  top: 120%;
+  left: 20%;
+  opacity: 0;
+}
 header .navmn li {
   margin: 15px;
+}
+header .navmn li:hover .bnimg {
+  max-height: 186.6px;
+  opacity: 1;
+}
+header .navmn li:hover .d1a {
+  color: #6C801A;
+}
+header .navmn li .d2ul {
+  max-height: 0;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
+  margin-left: 50vw;
+}
+header .navmn li .d2ul:hover {
+  overflow: visible;
+}
+header .navmn li .d2ul li {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.1rem;
+}
+header .navmn li .d2ul li:hover a {
+  color: #6C801A;
+}
+header .navmn li .d2ul li .d3ul li {
+  margin: auto 0;
+}
+header .before:hover .d2ul {
+  max-height: 300px;
 }
 header .icoBox li {
   margin: 15px;
@@ -112,7 +206,35 @@ header .icoBox li img {
 header .icoBox .userIco img {
   width: 24px;
 }
+header .imgbnr {
+  left: 0;
+  right: 0;
+}
+@media (max-width: 1400px) {
+  header .d2ul {
+    margin-left: 43vw !important;
+  }
+  header .bnimg {
+    left: 15%;
+    width: 350px;
+  }
+}
+@media (max-width: 1200px) {
+  header .d2ul {
+    margin-left: 35vw !important;
+  }
+  header .bnimg {
+    left: 2%;
+    width: 350px;
+  }
+}
 @media (max-width: 992px) {
+  header .d2ul {
+    max-height: unset !important;
+  }
+  header .containerjy {
+    --bs-gutter-x: 2rem;
+  }
   header .navBtn i {
     background-color: #1B1B1B;
   }
@@ -121,7 +243,7 @@ header .icoBox .userIco img {
     left: 0;
     top: 0;
     background-color: #FFFEF1;
-    height: 500px;
+    height: 1000px;
     width: 0;
     overflow: hidden;
     padding: 0;
@@ -134,12 +256,24 @@ header .icoBox .userIco img {
     width: 50%;
     opacity: 1;
   }
+  header .navmn .d2ul {
+    position: unset !important;
+    margin-left: 0 !important;
+    display: none;
+  }
+  header .navmn .d2ul.click {
+    display: block !important;
+  }
+  header .navmn .d2ul li {
+    margin: 0.5rem 0;
+    border: 0;
+  }
   header .navmn li {
     border-bottom: 1px solid #1B1B1B;
   }
   header .navmn li a {
     display: block;
-    width: 100px;
+    max-width: 200px;
   }
 }
 
@@ -256,30 +390,33 @@ header .icoBox .userIco img {
   }
 }
 
-.BestSeller .bestProduct {
-  text-align: center;
+@media (max-width: 992px) {
+  .BestSeller .productBox {
+    padding: 0 !important;
+  }
 }
-.BestSeller .bestProduct .productBox {
+
+.productBox {
   max-width: 294px;
   min-width: 205px;
   font-family: "Noto Sans KR", sans-serif;
 }
-.BestSeller .bestProduct .productBox img {
+.productBox img {
   width: 100%;
 }
-.BestSeller .bestProduct .productBox .textBox {
+.productBox .textBox {
   width: 100%;
 }
-.BestSeller .bestProduct .productBox .textBox .title {
+.productBox .textBox .title {
   font-weight: 400;
   font-size: 18px !important;
 }
-.BestSeller .bestProduct .productBox .textBox .price {
+.productBox .textBox .price {
   font-weight: 300;
   font-size: 18px !important;
 }
-.BestSeller .bestProduct .productBox .textBox .title,
-.BestSeller .bestProduct .productBox .textBox .price {
+.productBox .textBox .title,
+.productBox .textBox .price {
   display: block;
   width: 100%;
   font-size: 1rem;
@@ -287,7 +424,7 @@ header .icoBox .userIco img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.BestSeller .bestProduct .productBox .desc {
+.productBox .desc {
   font-size: 14px;
   display: block;
   width: 100%;
@@ -297,13 +434,9 @@ header .icoBox .userIco img {
   overflow: hidden;
   font-weight: 300;
 }
-@media (max-width: 992px) {
-  .BestSeller .productBox {
-    padding: 0 !important;
-  }
-}
 
 .osullocStory {
+  overflow-x: hidden;
   color: #FFFEF1;
 }
 .osullocStory .bgblack {
@@ -344,6 +477,9 @@ header .icoBox .userIco img {
 }
 .BestCategory .categoryBoxZone .cateBox a {
   font-size: 1.2rem;
+}
+.BestCategory .categoryBoxZone .cateBox a:hover {
+  color: #6C801A;
 }
 .BestCategory .categoryBoxZone .cateBox1 {
   background: url(/public/img/banner/osulloc39.jpg);
@@ -394,6 +530,7 @@ header .icoBox .userIco img {
 .OsllcocLocation .mySwiper .textBox {
   transform: translate(10%, 80%);
   transition: 0.5s;
+  opacity: 0.7;
 }
 .OsllcocLocation .mySwiper strong {
   font-family: "seolleimcool-SemiBold";
@@ -401,22 +538,22 @@ header .icoBox .userIco img {
 }
 .OsllcocLocation .mySwiper a {
   display: block;
-  background-color: #1B1B1B;
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 480px;
-  min-height: 375px;
+  width: 480px;
+  height: 370px;
 }
 .OsllcocLocation .mySwiper .swiper-wrapper {
   display: flex;
   align-items: center;
 }
-.OsllcocLocation .mySwiper .swiper-slide-next a {
-  max-width: 500px;
-  min-height: 395px;
+.OsllcocLocation .mySwiper .swiper-slide-active a {
+  width: 520px;
+  height: 390px;
 }
-.OsllcocLocation .mySwiper .swiper-slide-next .textBox {
+.OsllcocLocation .mySwiper .swiper-slide-active .textBox {
   transform: translate(10%, 60%);
+  opacity: 1;
 }
 .OsllcocLocation .mySwiper p {
   font-family: "Noto Sans KR", sans-serif;
@@ -452,6 +589,79 @@ header .icoBox .userIco img {
   border-right: 0;
   border-bottom: 0;
   transform: rotate(-45deg);
+}
+@media (max-width: 770px) {
+  .OsllcocLocation .swiperNB::after,
+  .OsllcocLocation .swiperPB::after {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .OsllcocLocation .swiperNB::after {
+    border: 2px solid #FFFEF1 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+  }
+  .OsllcocLocation .swiperPB::after {
+    border: 2px solid #FFFEF1 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+  }
+}
+
+.subscriptZone {
+  overflow-x: hidden;
+}
+.subscriptZone .subscriptBnr {
+  font-family: "DAEAM_LEE_TAE_JOON";
+  background-image: url("/public/img/banner/main_banner_pc_1.png");
+  width: auto;
+  height: 660px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+.subscriptZone .subscriptBnr .subText {
+  transform: translate(6rem, 8rem);
+}
+.subscriptZone .subscriptBnr .subText .subLogo {
+  background-image: url("/public/img/logo/logo.png");
+  width: 108px;
+  height: 221px;
+  background-repeat: no-repeat;
+  margin: 0 1rem 2rem;
+}
+.subscriptZone .subscriptBnr .subText .title {
+  font-size: 30px;
+  margin: 1rem;
+}
+.subscriptZone .subscriptBnr .subText .descP {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+.subscriptZone .subscriptBnrsm {
+  font-family: "DAEAM_LEE_TAE_JOON";
+  background-image: url("/public/img/mobile/mobile0.png");
+  width: auto;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+.subscriptZone .subscriptBnrsm .subText .subLogo {
+  background-image: url("/public/img/logo/logo.png");
+  width: 108px;
+  height: 221px;
+  background-repeat: no-repeat;
+  top: 53%;
+}
+.subscriptZone .subscriptBnrsm .subText .title {
+  font-size: 25px;
+  margin: 1rem;
+}
+.subscriptZone .subscriptBnrsm .subText .descP {
+  font-size: 1rem;
+  margin: 1rem;
 }
 
 footer {
@@ -494,4 +704,251 @@ footer .qnafooter .largeF {
   footer .adressdsec {
     font-size: 11px;
   }
+}
+
+@media (max-width: 600px) {
+  .jyySwiper strong,
+  .OsllcocLocation strong {
+    font-size: 25px !important;
+  }
+  .jyySwiper p,
+  .OsllcocLocation p {
+    font-size: 18px !important;
+  }
+  .jyySwiper .moreBtn,
+  .OsllcocLocation .moreBtn {
+    margin: unset !important;
+  }
+  .videoZone h2,
+  .BestSeller h2,
+  .osullocStory h2,
+  .BestCategory h2,
+  .OsllcocLocation h2,
+  .subscriptZone h2 {
+    font-size: 30px;
+  }
+  .videoZone .smT,
+  .BestSeller .smT,
+  .osullocStory .smT,
+  .BestCategory .smT,
+  .OsllcocLocation .smT,
+  .subscriptZone .smT {
+    font-size: 20px;
+    margin: 1.5rem;
+  }
+  .OsllcocLocation strong,
+  .BestCategory strong {
+    font-size: 1.4rem !important;
+  }
+  .OsllcocLocation p,
+  .BestCategory p {
+    font-size: 1.2rem !important;
+  }
+  .BestCategory strong {
+    font-size: 1.2rem !important;
+  }
+  .BestCategory p {
+    font-size: 1rem !important;
+  }
+  .BestCategory a {
+    font-size: 1.1rem !important;
+  }
+}
+@media (max-width: 450px) {
+  .BestCategory,
+  .jyySwiper,
+  .videoZone,
+  .BestSeller,
+  .osullocStory,
+  .BestCategory,
+  .OsllcocLocation,
+  .subscriptZone {
+    margin-bottom: 70px !important;
+  }
+  .videoZone {
+    margin-top: 70px !important;
+  }
+  .jyySwiper .imgBox strong {
+    font-size: 19px;
+  }
+  .jyySwiper .imgBox p {
+    font-size: 15px;
+  }
+  .jyySwiper .moreBtn {
+    margin: unset !important;
+  }
+  .videoZone h2,
+  .BestSeller h2,
+  .osullocStory h2,
+  .BestCategory h2,
+  .subscriptZone h2 {
+    font-size: 25px;
+  }
+  .videoZone .smT,
+  .BestSeller .smT,
+  .osullocStory .smT,
+  .BestCategory .smT,
+  .subscriptZone .smT {
+    font-size: 17px;
+    margin: 1rem !important;
+  }
+  .BestSeller .bestProduct .productBox {
+    margin: 0 auto;
+  }
+  .osullocStory .descP {
+    font-size: 15px !important;
+  }
+  .BestCategory strong {
+    font-size: 18px !important;
+  }
+  .BestCategory p {
+    font-size: 15px !important;
+  }
+  .BestCategory a {
+    font-size: 16px !important;
+  }
+  .OsllcocLocation .descP {
+    font-size: 18px;
+  }
+  .OsllcocLocation strong {
+    font-size: 22px !important;
+  }
+  .OsllcocLocation p {
+    font-size: 18px !important;
+  }
+  .subscriptZone .title {
+    font-size: 21px !important;
+  }
+}
+.o_event {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.o_event .eventIcon {
+  width: 60px;
+}
+.o_event .racipeArea h3::before,
+.o_event .togetherPd h3::before,
+.o_event .review h3::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #CE7978;
+  border-radius: 50%;
+  display: block;
+  margin-right: 0.5rem;
+}
+.o_event .racipeArea p,
+.o_event .togetherPd p,
+.o_event .review p {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.o_event .racipeArea span,
+.o_event .togetherPd span,
+.o_event .review span {
+  font-size: 1.1rem;
+  display: inline-block;
+}
+.o_event .racipeArea .number,
+.o_event .togetherPd .number,
+.o_event .review .number {
+  margin-right: 0.5rem;
+}
+.o_event .racipeArea .smT,
+.o_event .togetherPd .smT,
+.o_event .review .smT {
+  font-size: 1.4rem;
+}
+.o_event .racipeArea .smTen,
+.o_event .togetherPd .smTen,
+.o_event .review .smTen {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.o_event .racipeArea li,
+.o_event .togetherPd li,
+.o_event .review li {
+  margin: 1rem 0;
+}
+.o_event .imgur img {
+  width: 450px;
+}
+.o_event .gotoPd {
+  width: 320px;
+}
+.o_event .gotoPd span,
+.o_event .gotoPd p {
+  font-size: 1.4rem;
+  margin: 0.2rem 0;
+}
+.o_event a.abtn {
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.o_event a.abtn:hover {
+  color: #6C801A;
+  border-color: #6C801A !important;
+}
+.o_event .review .reveiwIcon {
+  width: 40px;
+}
+.o_event .reviewSwiper .imgBox img {
+  width: 380px;
+  height: 295px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+.o_event .reviewSwiper .textBox {
+  background-color: #ACBEA9;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.o_event .reviewSwiper strong {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.shopBest,
+.shop {
+  margin-top: 76.8px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.shopBest h2,
+.shop h2 {
+  font-weight: 600 !important;
+}
+.shopBest .back_img,
+.shop .back_img {
+  width: 100vw;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.shopBest .bestnum,
+.shop .bestnum {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: #5A7E62;
+  color: white;
+}
+
+.category li {
+  border-radius: 20px;
+  background-color: #5A7E62;
+  color: white;
+  width: 70px;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0.8rem;
+}
+
+.bestnum2 {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: #f88f75;
+  color: white;
 }

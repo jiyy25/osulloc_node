@@ -7,15 +7,27 @@
 
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
+@font-face {
+    font-family: 'DAEAM_LEE_TAE_JOON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/DAEAM_LEE_TAE_JOON.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 $seolFont: 'seolleimcool-SemiBold';
 $Wcolor: #FFFEF1;
 $Bcolor: #1B1B1B;
 $krFont: "Noto Sans KR", sans-serif;
 $nanumFont: "NanumSquare", sans-serif;
+$dreamFont: 'DAEAM_LEE_TAE_JOON';
 
 .mbt-100 {
     margin: 100px 0 !important;
+}
+
+.mt-150 {
+    margin-top: 150px !important;
 }
 
 .mb-100 {
@@ -50,7 +62,7 @@ h6 {
 }
 
 .zup {
-    z-index: 99999;
+    z-index: 999999999;
 }
 
 .small_font {
@@ -61,15 +73,30 @@ h6 {
     font-size: 22px;
 }
 
+.containerjy {
+    --bs-gutter-x: 10rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /////////////////header zone/////////////////
 
 header {
+    transition: 0.5s;
+
+    &:hover {
+        background-color: #fff;
+    }
+
     font-family: $seolFont;
     background-color: transparent;
     font-size: 20px;
     padding: 0.5rem;
     z-index: 999999;
-    color: $Bcolor;
 
     .navBtn {
         width: 35px;
@@ -130,12 +157,105 @@ header {
         margin-bottom: 0;
     }
 
+    .backimg::after {
+        content: "";
+        background-image: url("../../public/img/banner/dadaLightPc_1.jpg");
+        background-size: contain;
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        z-index: 999999999;
+        right: 100%;
+        top: 0;
+        display: block;
+    }
+
+    .d2li {
+        position: relative;
+    }
+
+    .before {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            height: 0;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+    }
+
+
+    .before:hover::before {
+        height: 250px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .bnimg {
+        max-height: 0;
+        transition: 0.5s;
+        display: block;
+        position: absolute;
+        width: 400px;
+        top: 120%;
+        left: 20%;
+        opacity: 0;
+    }
 
     .navmn {
+
         li {
             margin: 15px;
 
+
+            &:hover .bnimg {
+                max-height: 186.6px;
+                opacity: 1;
+            }
+
+            &:hover .d1a {
+
+                color: #6C801A;
+
+            }
+
+            .d2ul {
+                max-height: 0;
+                overflow: hidden;
+                left: 0;
+                right: 0;
+                top: 100%;
+                transition: .5s;
+                margin-left: 50vw;
+
+                &:hover {
+                    overflow: visible;
+                }
+
+                li {
+                    font-family: $krFont;
+                    font-size: 1.1rem;
+
+                    &:hover a {
+                        color: #6C801A;
+                    }
+
+                    .d3ul {
+                        li {
+                            margin: auto 0;
+                        }
+                    }
+                }
+
+
+            }
         }
+    }
+
+    .before:hover .d2ul {
+        max-height: 300px;
     }
 
     .icoBox {
@@ -155,18 +275,55 @@ header {
 
     }
 
+    .imgbnr {
+        left: 0;
+        right: 0;
+    }
+
+    // 상단반응형
+    @media (max-width: 1400px) {
+        .d2ul {
+            margin-left: 43vw !important;
+        }
+
+        .bnimg {
+            left: 15%;
+            width: 350px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .d2ul {
+            margin-left: 35vw !important;
+        }
+
+        .bnimg {
+            left: 2%;
+            width: 350px;
+        }
+    }
 
     @media (max-width: 992px) {
+
+        .d2ul {
+            max-height: unset !important;
+        }
+
+        .containerjy {
+            --bs-gutter-x: 2rem;
+        }
+
         .navBtn i {
             background-color: $Bcolor;
         }
+
 
         .navmn {
             position: absolute;
             left: 0;
             top: 0;
             background-color: $Wcolor;
-            height: 500px;
+            height: 1000px;
             width: 0;
             overflow: hidden;
             padding: 0;
@@ -180,17 +337,36 @@ header {
                 opacity: 1;
             }
 
+
+            .d2ul {
+                position: unset !important;
+                margin-left: 0 !important;
+                display: none;
+
+                &.click {
+                    display: block !important;
+                }
+
+                li {
+                    margin: 0.5rem 0;
+                    border: 0;
+
+                }
+
+            }
+
+
             li {
                 border-bottom: 1px solid $Bcolor;
 
                 a {
                     display: block;
-                    width: 100px;
+                    max-width: 200px;
                 }
             }
 
-
         }
+
     }
 
 }
@@ -309,10 +485,9 @@ header {
                 }
             }
 
-
         }
-
     }
+
 }
 
 /////////////////Mov///////////////////////
@@ -352,63 +527,13 @@ header {
             transform: translateX(-50%);
         }
     }
+
 }
 
 
 ///////////////////BestSeller//////////////////
 
 .BestSeller {
-
-    .bestProduct {
-        text-align: center;
-
-        .productBox {
-            // min-width: 280px;
-            max-width: 294px;
-            min-width: 205px;
-            font-family: $krFont;
-
-            img {
-                width: 100%;
-            }
-
-            .textBox {
-                width: 100%;
-
-                .title {
-                    font-weight: 400;
-                    font-size: 18px !important;
-                }
-
-                .price {
-                    font-weight: 300;
-                    font-size: 18px !important;
-                }
-
-                .title,
-                .price {
-                    display: block;
-                    width: 100%;
-                    font-size: 1rem;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-            }
-
-            .desc {
-                font-size: 14px;
-                display: block;
-                width: 100%;
-                font-size: 1rem;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                font-weight: 300;
-            }
-
-        }
-    }
 
     @media (max-width:992px) {
 
@@ -417,12 +542,61 @@ header {
 
         }
     }
+
+}
+
+.productBox {
+    // min-width: 280px;
+    max-width: 294px;
+    min-width: 205px;
+    font-family: $krFont;
+
+    img {
+        width: 100%;
+    }
+
+    .textBox {
+        width: 100%;
+
+        .title {
+            font-weight: 400;
+            font-size: 18px !important;
+        }
+
+        .price {
+            font-weight: 300;
+            font-size: 18px !important;
+        }
+
+        .title,
+        .price {
+            display: block;
+            width: 100%;
+            font-size: 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    .desc {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 300;
+    }
+
 }
 
 
 //////////////////osullocStory//////////////////
 
 .osullocStory {
+    overflow-x: hidden;
     color: $Wcolor;
 
     .bgblack {
@@ -446,6 +620,7 @@ header {
         height: 470px;
         width: auto;
     }
+
 }
 
 /////////////BestCategory////////////////////
@@ -470,7 +645,12 @@ header {
 
             a {
                 font-size: 1.2rem;
+
+                &:hover {
+                    color: #6C801A;
+                }
             }
+
         }
 
 
@@ -521,6 +701,7 @@ header {
             }
         }
     }
+
 }
 
 //////////////////OsllcocLocation/////////////////
@@ -530,9 +711,11 @@ header {
     .mySwiper {
         color: $Wcolor;
 
+
         .textBox {
             transform: translate(10%, 80%);
             transition: 0.5s;
+            opacity: 0.7;
         }
 
         strong {
@@ -542,11 +725,10 @@ header {
 
         a {
             display: block;
-            background-color: #1B1B1B;
             background-size: cover;
             background-repeat: no-repeat;
-            max-width: 480px;
-            min-height: 375px;
+            width: 480px;
+            height: 370px;
         }
 
         .swiper-wrapper {
@@ -554,14 +736,16 @@ header {
             align-items: center;
         }
 
-        .swiper-slide-next {
+        .swiper-slide-active {
+
             a {
-                max-width: 500px;
-                min-height: 395px;
+                width: 520px;
+                height: 390px;
             }
 
             .textBox {
                 transform: translate(10%, 60%);
+                opacity: 1;
             }
         }
 
@@ -585,8 +769,6 @@ header {
             border: 0;
             background-color: transparent;
             transform: translateY(-50%);
-            // background-color: aquamarine;
-
         }
 
         .swiperNB::after {
@@ -611,8 +793,98 @@ header {
 
     }
 
+    @media (max-width:770px) {
+
+        .swiperNB::after,
+        .swiperPB::after {
+            display: none;
+        }
+    }
+
+    @media (min-width:992px) {
+
+        .swiperNB::after {
+            border: 2px solid $Wcolor !important;
+            border-right: 0 !important;
+            border-bottom: 0 !important;
+        }
+
+        .swiperPB::after {
+            border: 2px solid $Wcolor !important;
+            border-right: 0 !important;
+            border-bottom: 0 !important;
+        }
+    }
 }
 
+//////////////// subscriptZone//////////////
+
+.subscriptZone {
+    overflow-x: hidden;
+
+    .subscriptBnr {
+        font-family: 'DAEAM_LEE_TAE_JOON';
+        background-image: url("/public/img/banner/main_banner_pc_1.png");
+        width: auto;
+        height: 660px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+
+        .subText {
+            transform: translate(6rem, 8rem);
+
+            .subLogo {
+                background-image: url("/public/img/logo/logo.png");
+                width: 108px;
+                height: 221px;
+                background-repeat: no-repeat;
+                margin: 0 1rem 2rem;
+            }
+
+            .title {
+                font-size: 30px;
+                margin: 1rem;
+            }
+
+            .descP {
+                font-size: 1.2rem;
+                margin: 1rem;
+            }
+        }
+    }
+
+    .subscriptBnrsm {
+        font-family: 'DAEAM_LEE_TAE_JOON';
+        background-image: url("/public/img/mobile/mobile0.png");
+        width: auto;
+        height: 900px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+
+        .subText {
+
+            .subLogo {
+                background-image: url("/public/img/logo/logo.png");
+                width: 108px;
+                height: 221px;
+                background-repeat: no-repeat;
+                top: 53%;
+            }
+
+            .title {
+                font-size: 25px;
+                margin: 1rem;
+            }
+
+            .descP {
+                font-size: 1rem;
+                margin: 1rem;
+            }
+        }
+    }
+}
 
 /////////////////footer////////////////////////
 
@@ -673,4 +945,325 @@ footer {
             font-size: 11px;
         }
     }
+}
+
+//모바일 반응형
+@media (max-width:600px) {
+
+    .jyySwiper,
+    .OsllcocLocation {
+
+        strong {
+            font-size: 25px !important;
+        }
+
+        p {
+            font-size: 18px !important;
+        }
+
+
+        .moreBtn {
+            margin: unset !important;
+        }
+    }
+
+    .videoZone,
+    .BestSeller,
+    .osullocStory,
+    .BestCategory,
+    .OsllcocLocation,
+    .subscriptZone {
+        h2 {
+            font-size: 30px;
+        }
+
+        .smT {
+            font-size: 20px;
+            margin: 1.5rem;
+        }
+    }
+
+    .OsllcocLocation,
+    .BestCategory {
+        strong {
+            font-size: 1.4rem !important;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .BestCategory {
+        strong {
+            font-size: 1.2rem !important;
+        }
+
+        p {
+            font-size: 1rem !important;
+        }
+
+        a {
+            font-size: 1.1rem !important;
+        }
+    }
+}
+
+
+@media (max-width:450px) {
+
+    .BestCategory,
+    .jyySwiper,
+    .videoZone,
+    .BestSeller,
+    .osullocStory,
+    .BestCategory,
+    .OsllcocLocation,
+    .subscriptZone {
+        margin-bottom: 70px !important;
+    }
+
+    .videoZone {
+        margin-top: 70px !important;
+    }
+
+
+    .jyySwiper {
+        .imgBox {
+            strong {
+                font-size: 19px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        .moreBtn {
+            margin: unset !important;
+        }
+    }
+
+    .videoZone,
+    .BestSeller,
+    .osullocStory,
+    .BestCategory,
+    .subscriptZone {
+        h2 {
+            font-size: 25px;
+        }
+
+        .smT {
+            font-size: 17px;
+            margin: 1rem !important;
+        }
+    }
+
+    .BestSeller {
+        .bestProduct {
+            .productBox {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .osullocStory {
+        .descP {
+            font-size: 15px !important;
+        }
+    }
+
+    .BestCategory {
+        strong {
+            font-size: 18px !important;
+        }
+
+        p {
+            font-size: 15px !important;
+        }
+
+        a {
+            font-size: 16px !important;
+        }
+    }
+
+    .OsllcocLocation {
+        .descP {
+            font-size: 18px;
+
+        }
+
+        strong {
+            font-size: 22px !important;
+        }
+
+        p {
+            font-size: 18px !important;
+        }
+    }
+
+    .subscriptZone {
+        .title {
+            font-size: 21px !important;
+        }
+    }
+
+}
+
+//서브페이지
+//이벤트
+.o_event {
+    font-family: $krFont;
+
+    .eventIcon {
+        width: 60px;
+    }
+
+    .racipeArea,
+    .togetherPd,
+    .review {
+        h3::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #CE7978;
+            border-radius: 50%;
+            display: block;
+            margin-right: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        span {
+            font-size: 1.1rem;
+            display: inline-block;
+        }
+
+        .number {
+            margin-right: 0.5rem;
+        }
+
+        .smT {
+            font-size: 1.4rem;
+        }
+
+        .smTen {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        li {
+            margin: 1rem 0;
+        }
+    }
+
+    .imgur {
+        img {
+            width: 450px;
+        }
+
+    }
+
+    .gotoPd {
+        width: 320px;
+
+        span,
+        p {
+            font-size: 1.4rem;
+            margin: 0.2rem 0;
+        }
+    }
+
+    a.abtn {
+        font-size: 1.2rem;
+        transition: .5s;
+
+        &:hover {
+            color: #6C801A;
+            border-color: #6C801A !important;
+        }
+    }
+
+    .review {
+        .reveiwIcon {
+            width: 40px;
+        }
+    }
+
+    .reviewSwiper {
+
+        .imgBox {
+
+            img {
+                width: 380px;
+                height: 295px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                object-fit: cover;
+            }
+        }
+
+        .textBox {
+            background-color: #ACBEA9;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        strong {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+    }
+}
+
+//shop_best
+.shopBest,
+.shop {
+    margin-top: 76.8px;
+    font-family: $krFont;
+
+    h2 {
+        font-weight: 600 !important;
+    }
+
+    .back_img {
+        width: 100vw;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    .bestnum {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-color: #5A7E62;
+        color: white;
+    }
+
+
+}
+
+.category {
+    li {
+        border-radius: 20px;
+        background-color: #5A7E62;
+        color: white;
+        width: 70px;
+        text-align: center;
+        padding: 0.5rem 0;
+        margin: 0.8rem;
+    }
+}
+
+.bestnum2 {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: #f88f75;
+    color: white;
 }

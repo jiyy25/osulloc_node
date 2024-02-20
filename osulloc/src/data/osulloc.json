@@ -135,7 +135,7 @@
         },
         {
             "imgsrc": "https://i.imgur.com/A5guFG8.jpg",
-            "title": "달빛섬 아이스티",
+            "title": "달빛아이스티섬 ",
             "text": "제주 여름밤의 시원함을 담은 배향 아이스티입니다. 찬물에도 잘 우러나와 간편하게 즐기실 수 있습니다.",
             "price": "13000",
             "alt": "달빛섬 아이스티",
@@ -269,7 +269,7 @@
         },
         {
             "imgsrc": "https://i.imgur.com/FHRBHP9.jpg",
-            "location": "오설록 1979",
+            "location": "오설록 | 티하우스 1979",
             "o_desc": "브랜드의 격을 한 단계 끌어올린 | 오설록의 프리미엄 티룸"
         },
         {
@@ -281,6 +281,74 @@
             "imgsrc": "https://i.imgur.com/n0ctX4J.jpg",
             "location": "오설록 | 티하우스 용산파크점",
             "o_desc": "캐주얼하면서도 차에 대한 | 전문성을 담은 세련된 공간"
+        }
+    ],
+    "reveiw": [
+        {
+            "imgsrc": "https://i.ibb.co/PgCR0Jb/osulloc-review25.jpg",
+            "userid": "malchalove",
+            "date": "2024.2.16",
+            "re_text": "맛있는 녹차라떼 즐기기"
+        },
+        {
+            "imgsrc": "https://i.ibb.co/pfjTpKh/CK-pc0031147083.jpg",
+            "userid": "hihi333",
+            "date": "2024.2.13",
+            "re_text": "이달의 레시피 만들어 봤어요"
+        },
+        {
+            "imgsrc": "https://i.ibb.co/F7wzt5m/osulloc-review28.jpg",
+            "userid": "iceman ",
+            "date": "2024.2.10",
+            "re_text": "집에서  녹차 아이스크림 만들기"
+        },
+        {
+            "imgsrc": "https://i.ibb.co/PW9xwL4/osulloc-review27.jpg",
+            "userid": "cookiemon",
+            "date": "2024.2.5",
+            "re_text": "말차 초콜릿 어떠세요?   "
+        },
+        {
+            "imgsrc": "https://i.ibb.co/CMD1P8D/osulloc-review24.jpg",
+            "userid": "gogo11",
+            "date": "2024.2.5",
+            "re_text": "고급지게 즐겨봤어요"
+        },
+        {
+            "imgsrc": "https://i.ibb.co/dWwTj21/osulloc-review26.jpg",
+            "userid": "halolll",
+            "date": "2024.2.1",
+            "re_text": "쿠키 만들었어요!"
+        }
+    ],
+    "shop": {
+        "tea_section": [
+            {
+                "banner_img": "https://i.ibb.co/KmhBRJd/banner-teaprod.jpg",
+                "cate_title": "티제품",
+                "cate_desc": ""
+            }
+        ],
+        "food_section": [
+            {
+                "banner_img": "https://i.ibb.co/9gMTH70/banner-teafood",
+                "cate_title": "티푸드",
+                "cate_desc": ""
+            }
+        ]
+    },
+    "category": [
+        {
+            "cate_title": "전체"
+        },
+        {
+            "cate_title": "세트"
+        },
+        {
+            "cate_title": "티백"
+        },
+        {
+            "cate_title": "콤부차"
         }
     ]
 }
