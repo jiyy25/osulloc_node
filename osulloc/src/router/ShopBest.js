@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { H3Title, SmallTitle } from '../styled/Title'
 import ProductBox from '../component/ProductBox'
 
 
 function ShopBest(props) {
+
+    const cardnum = useRef(12);
 
 
     return (
@@ -13,9 +15,9 @@ function ShopBest(props) {
             </div>
             <div className='shop_productList mt-5 pt-5 container'>
                 <H3Title>베스트셀러</H3Title>
-                <SmallTitle>이달의 베스트 오설록</SmallTitle>
+                <SmallTitle>이달의 베스트 오설록 {cardnum.current}위</SmallTitle>
                 <div className='bestProduct row justify-content-between align-items-center'>
-                    <ProductBox datasrc={props.datasrc} cardnum={12} bestPage={'best'}></ProductBox>
+                    <ProductBox datasrc={props.datasrc} cardnum={cardnum.current} bestPage={'best'}></ProductBox>
                 </div>
             </div>
         </div >

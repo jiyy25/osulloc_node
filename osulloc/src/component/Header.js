@@ -9,9 +9,12 @@ import "@fontsource/noto-sans-kr/400.css"
 import { Link } from 'react-router-dom';
 
 
-function Header() {
+
+
+function Header({ datasrc }) {
     const [toggleOpen, setToggleOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
+
     const hamClick = () => {
         setToggleOpen(!toggleOpen)
     }
@@ -64,10 +67,11 @@ function Header() {
                             <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
                             <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "제품" ? 'click' : ''}`}>
                                 <li className='d2li'><Link to='/Shop/best' className='d2a '>베스트</Link></li>
-                                <li><Link to="/shop/tea" className='d2a'>티 제품</Link></li>
-                                <li><Link to="/shop" className='d2a'>티푸드</Link></li>
-                                <li><Link to="" className='d2a'>티웨어</Link></li>
-                                <li><Link to="" className='d2a'>라이프 스타일</Link></li>
+                                {
+                                    datasrc.filter((list) => list.category_id === list.parent_id).map((e, i) => <li><Link to={`/shop/${e.category_id}`} className='d2a'>{e.cate_title}</Link></li>)
+                                    // o_category 테이블과 연동
+                                }
+
                             </ul>
                         </li>
                         <li><span href="" className='d1a'>선물추천</span></li>

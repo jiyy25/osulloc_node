@@ -62,7 +62,7 @@ function App() {
   // }, [products]);
 
 
-  const [data, setData] = useState({ swipe: [], products: [] });
+  const [data, setData] = useState({ swipe: [], products: [], store: [], o_category: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -77,10 +77,22 @@ function App() {
             "Content-Type": "application/json"
           }
         });
+        const storeResponse = await axios.get("/api/o_store", {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+        const naviResponse = await axios.get("/api/o_category", {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
 
         setData({
           swipe: swipeResponse.data,
-          products: productsResponse.data
+          products: productsResponse.data,
+          store: storeResponse.data,
+          o_category: naviResponse.data
         });
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -88,17 +100,18 @@ function App() {
     };
 
     fetchData();
-  }, []);
+  }, []); 
 
   useEffect(() => {
     console.log(data.swipe);
     console.log(data.products);
+    console.log(data.store);
+    console.log(data.o_category);
   }, [data]);
-
 
   return (
     <>
-      <Header></Header>
+      <Header datasrc={data.o_category && data.o_category}></Header>
       <Routes>
         <Route path="/" element={
           <>
@@ -107,15 +120,16 @@ function App() {
             <Bestseller datasrc={data.products && data.products}></Bestseller>
             <Story></Story>
             <BestCategory></BestCategory>
-            <Location datasrc={datasrc.store}></Location>
+            <Location datasrc={data.store && data.store}></Location>
             <Subscribe></Subscribe>
           </>
         }>
 
         </Route>
-        <Route path="/event" element={<Event datasrc={datasrc.reveiw} />}></Route>
-        <Route path="/shop/best" element={<ShopBest datasrc={datasrc.product} />}></Route>
-        <Route path="/shop/tea" element={<Shop datasrc={datasrc} />}></Route>
+        <Route path="/event" element={<Event datasrc={datasrc.review} />}></Route>
+        <Route path="/shop/best" element={<ShopBest datasrc={data.products && data.products} />}></Route>
+        <Route path="/shop/:category_id" element={<Shop datasrc={{ prd: data.products && data.products, navi: data.o_category && data.o_category }} />}></Route>
+        {/* shop은 products와 category 테이블을 이용하여 카테로리 별로 필터링 */}
       </Routes>
       <Footer></Footer>
     </>

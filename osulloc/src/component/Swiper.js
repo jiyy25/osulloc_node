@@ -38,12 +38,12 @@ export default function App(props) {
                                 <div className='imgBox position-relative'>
                                     <div>
                                         <a href="#none">
-                                            <img src={v.imgsrc} alt={v.alt} className='d-none d-lg-block' />
-                                            <img src={v.sm_imgsrc} alt={v.alt} className='d-lg-none' />
+                                            <img src={v.mimg} alt={v.alt} className='d-none d-lg-block' />
+                                            <img src={v.simg} alt={v.alt} className='d-lg-none' />
                                         </a>
                                         <div className='container d-none d-lg-block  position-absolute m-lg-auto start-0 end-0 top-50 translate-middle-y descBox mb-5'>
                                             <strong>
-                                                {v.text.split('|').map((vv, ii) => {
+                                                {v.mtext.split('|').map((vv, ii) => {
                                                     return (
                                                         <Fragment key={ii}>
                                                             {vv}
@@ -53,7 +53,7 @@ export default function App(props) {
                                                 })}
                                             </strong>
                                             <p className='mb-5'>
-                                                {v.sm_text.split('|').map((vv, ii) => {
+                                                {v.stext.split('|').map((vv, ii) => {
                                                     return (
                                                         <Fragment key={ii}>
                                                             {vv}
@@ -66,7 +66,7 @@ export default function App(props) {
                                         </div>
                                         <div className='d-lg-none position-absolute start-0 end-0 top-0 bottom-0 d-flex flex-column justify-content-end pb-5 px-5 align-items-center text-center descBox'>
                                             <strong>
-                                                {v.text.split('|').map((vv, ii) => {
+                                                {v.mtext.split('|').map((vv, ii) => {
                                                     return (
                                                         <Fragment key={ii}>
                                                             {vv}
@@ -76,7 +76,7 @@ export default function App(props) {
                                                 })}
                                             </strong>
                                             <p className='mb-3'>
-                                                {v.sm_text.split('|').map((vv, ii) => {
+                                                {v.stext.split('|').map((vv, ii) => {
                                                     return (
                                                         <Fragment key={ii}>
                                                             {vv}
