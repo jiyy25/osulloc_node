@@ -17,8 +17,6 @@ import Event from "./router/Event";
 import Shop from "./router/Shop";
 import ShopBest from "./router/ShopBest";
 
-
-
 function App() {
   // const [swipe, setswipe] = useState([]);
   // const [products, setProducts] = useState([])
@@ -62,7 +60,9 @@ function App() {
   // }, [products]);
 
 
-  const [data, setData] = useState({ swipe: [], products: [], store: [], o_category: [] });
+  const [data, setData] = useState({
+    swipe: [], products: [], store: [], o_category: []
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -92,7 +92,7 @@ function App() {
           swipe: swipeResponse.data,
           products: productsResponse.data,
           store: storeResponse.data,
-          o_category: naviResponse.data
+          o_category: naviResponse.data,
         });
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -100,7 +100,7 @@ function App() {
     };
 
     fetchData();
-  }, []); 
+  }, []);
 
   useEffect(() => {
     console.log(data.swipe);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/style.min.css';
 import { IoBagOutline } from "react-icons/io5";
@@ -24,6 +24,7 @@ function Header({ datasrc }) {
         // 그렇지 않다면, 클릭된 메뉴를 활성화 상태로 설정
         setActiveMenu(activeMenu === menu ? '' : menu);
     };
+
 
     React.useEffect(() => {
         const hdobj = document.querySelector("header");
