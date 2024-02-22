@@ -23,7 +23,7 @@ function Shop({ datasrc }) {
 
     const handleCategoryClick = (category_id) => {
         //클릭하면 소메뉴 필터링
-        const filterPrd = prd && prd.filter((items) => items.taplist_id === category_id);
+        const filterPrd = prd && prd.filter((items) => items.taplist_id === category_id); //여기로 오는 category_id는 navi의 category_id??
         setPrdlist(filterPrd);
 
         // console.log('prd확인 소메뉴 클릭시'+ prd)
@@ -37,11 +37,11 @@ function Shop({ datasrc }) {
         } else {
             setopensub(false)
         }
-        console.log( navi, prd, typeof category_id, typeof navi[0].category_id)
+        console.log(navi, prd, typeof category_id, typeof navi[0].category_id)
         console.log(submenu)
         setPrdlist(prolist); //useeffect 실행시 prolist로 다시 변경하여 초기화!
     }, [datasrc, category_id])
-    
+
 
     return (
         <div className='shop mb-100'>

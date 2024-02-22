@@ -16,6 +16,7 @@ import Subscribe from "./component/Subscribe";
 import Event from "./router/Event";
 import Shop from "./router/Shop";
 import ShopBest from "./router/ShopBest";
+import Subscribepage from "./router/Subscribepage";
 
 function App() {
   // const [swipe, setswipe] = useState([]);
@@ -130,6 +131,7 @@ function App() {
         <Route path="/shop/best" element={<ShopBest datasrc={data.products && data.products} />}></Route>
         <Route path="/shop/:category_id" element={<Shop datasrc={{ prd: data.products && data.products, navi: data.o_category && data.o_category }} />}></Route>
         {/* shop은 products와 category 테이블을 이용하여 카테로리 별로 필터링 */}
+        <Route path="/dada" element={<Subscribepage datasrc={datasrc}></Subscribepage>}></Route>
       </Routes>
       <Footer></Footer>
     </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { BigTitle, SmallTitle } from '../styled/Title'
 import { BmoreBtn } from '../styled/Btns'
+import { Link } from 'react-router-dom'
 
 
 
@@ -30,7 +31,9 @@ function Subscribe() {
                     </div>
                 </div>
             </div>
-            <BmoreBtn className='mt-5'>자세히보기</BmoreBtn>
+            <Link to='/dada'>
+                <BmoreBtn className='mt-5'>자세히보기</BmoreBtn>
+            </Link>
         </div>
     )
 }

@@ -80,7 +80,7 @@ function Header({ datasrc }) {
                             <span href="" className='d1a' onClick={() => { toggleMenu("다다일상") }}>다다일상</span>
                             <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
                             <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "다다일상" ? 'click' : ''}`}>
-                                <li><Link to="" className='d2a '>다다일상 구독</Link></li>
+                                <li><Link to="/dada" className='d2a '>다다일상 구독</Link></li>
                                 <li><Link to="" className='d2a'>정기배송 신청</Link></li>
                             </ul>
                         </li>
