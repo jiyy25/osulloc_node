@@ -65,7 +65,8 @@ function Header({ datasrc }) {
                             <span href="" className='d1a' onClick={
                                 () => { toggleMenu("제품") }
                             }>제품</span>
-                            <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
+                            <Link to='/dada'> <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' /></Link >
+
                             <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "제품" ? 'click' : ''}`}>
                                 <li className='d2li'><Link to='/Shop/best' className='d2a '>베스트</Link></li>
                                 {
@@ -88,7 +89,7 @@ function Header({ datasrc }) {
                             <span href="" className='d1a' onClick={() => { toggleMenu("브랜드") }}>브랜드</span>
                             <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
                             <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "브랜드" ? 'click' : ''}`}>
-                                <li><Link to="" className='d2a '>오설록 스토리</Link></li>
+                                <li><Link to="/brand" className='d2a '>오설록 스토리</Link></li>
                                 <li><Link to="" className='d2a'>제주 티뮤지엄</Link></li>
                                 <li><Link to="" className='d2a'>매장 소개</Link></li>
                             </ul>

@@ -17,6 +17,7 @@ import Event from "./router/Event";
 import Shop from "./router/Shop";
 import ShopBest from "./router/ShopBest";
 import Subscribepage from "./router/Subscribepage";
+import Brand from './router/Brand';
 
 function App() {
   const [data, setData] = useState({
@@ -46,7 +47,7 @@ function App() {
             "Content-Type": "application/json"
           }
         })
-     
+
         setData({
           swipe: swipeResponse.data,
           products: productsResponse.data,
@@ -62,12 +63,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0); // 페이지 이동 시 스크롤 위치를 맨 위로 이동
-
-    console.log(data.swipe);
-    console.log(data.products);
-    console.log(data.store);
-    console.log(data.o_category);
+    // console.log(data.swipe);
+    // console.log(data.products);
+    // console.log(data.store);
+    // console.log(data.o_category);
   }, [data]);
 
   return (
@@ -92,6 +91,7 @@ function App() {
         <Route path="/shop/:category_id" element={<Shop datasrc={{ prd: data.products && data.products, navi: data.o_category && data.o_category }} />}></Route>
         {/* shop은 products와 category 테이블을 이용하여 카테로리 별로 필터링 */}
         <Route path="/dada" element={<Subscribepage datasrc={data.products && data.products}></Subscribepage>}></Route>
+        <Route path="/brand" element={<Brand />}></Route>
       </Routes>
       <Footer></Footer>
     </>

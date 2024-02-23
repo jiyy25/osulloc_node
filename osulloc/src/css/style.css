@@ -11,6 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .mbt-100 {
   margin: 100px 0 !important;
 }
@@ -970,4 +976,8 @@ footer .qnafooter .largeF {
 }
 .o_dada .subscribe_dada p {
   font-size: 1.2rem;
+}
+
+.brand {
+  font-family: "DAEAM_LEE_TAE_JOON";
 }

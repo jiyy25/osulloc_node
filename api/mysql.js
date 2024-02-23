@@ -33,21 +33,6 @@ mysqlapi.get('/:tablenm/:id', (req, res) => {
     })
 })
 
-// mysqlapi.post('/:tablenm/dada'), (req, res) => {
-//     const { tablenm } = req.params.tablenm;
-//     const { u_name, u_phone, u_email } = req.body;
-
-//     myconnection.getConnection((err, connect) => {
-//         if (err) throw console.log("DB접속정보확인" + err)
-//         connect.query(`INSERT INTO ${tablenm} (u_name, u_phone, u_email) VALUES(?,?,?)`, [u_name, u_phone, u_email], (error, result) => {
-//             if (error) throw console.log("쿼리문 오류")
-//             res.send(result)
-//             connect.release();
-//         })
-//     })
-// }
-
-
 // pk글 삭제
 mysqlapi.post('/:tablenm/:id/d', (req, res) => {
     const tablenm = req.params.tablenm
@@ -61,15 +46,15 @@ mysqlapi.post('/:tablenm/:id/d', (req, res) => {
     })
 })
 
-// 글 삽입
+// 글 삽입 
 mysqlapi.post('/:tablenm', (req, res) => {
-    const tablenm = req.params.tablenm;
-
-
+    const tablenm = req.params.tablenm; // URL의 파라미터로부터 테이블명을 가져옴.
 
     //모든 폼태그의 필드와 값을 정리
     const columns = Object.keys(req.body.body).join(', ');
     const values = Object.values(req.body.body).map(value => `'${value}'`).join(', ');
+
+    console.log("테이블", tablenm, "필드명", columns, "해당값", values)
 
     // console.log(tablenm, req.body, req.params)
     // products {
@@ -92,7 +77,7 @@ mysqlapi.post('/:tablenm', (req, res) => {
             connect.query(`INSERT INTO ${tablenm}  (${columns})
             VALUES (${values})`, (error, result) => {
                 if (error) throw console.log("글수정 혹은 글삽입 쿼리문 오류")
-                res.send(result)
+                res.send({ msg: "감사합니다." })
             })
         }
     })
@@ -112,7 +97,7 @@ mysqlapi.post('/:tablenm/:id/m', (req, res) => {
         if (err) throw console.log("Post DB접속정보확인 " + err)
         connect.query(`UPDATE ${tablenm} SET  ${setClause} WHERE id = ${pk}`, (error, result) => {
             if (error) throw console.log("글수정 혹은 글삽입 쿼리문 오류")
-            res.send(result)
+            res.send({ msg: "수정이 완료되었습니다." })
         })
     })
 })
