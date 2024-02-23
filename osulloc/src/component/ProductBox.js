@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function ProductBox({ datasrc, cardnum, bestPage }) {
+function ProductBox({ datasrc, cardnum, bestPage, priceNone }) {
     console.log(`소메뉴데이터": ${datasrc}`)
     return (
         <>
@@ -22,7 +22,7 @@ function ProductBox({ datasrc, cardnum, bestPage }) {
                             <div className='textBox mt-2'>
                                 <div className='title'><Link to="">{v.title}</Link></div>
                                 <div className='desc'>{v.text}</div>
-                                <div className='price'>{v.price}원</div>
+                                <div className={`price ${priceNone === "none" ? "d-none" : ""}`}>{v.price}원</div>
                             </div>
                         </div >
                     )

@@ -1,23 +1,64 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BigTitle, SmallTitle } from '../styled/Title'
 import { GreenBtn } from '../styled/Btns'
 import ProductBox from '../component/ProductBox'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useForm } from "react-hook-form"
+import axios from 'axios'
 
 
 function Subscribepage(props) {
+    //상품필터링
+    const pickpro = props.datasrc && props.datasrc.filter((items) => items.taplist_id === 9)
+    console.log(pickpro)
+
+    const [content, setContent] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
     //register 각각의 입력 필드를 폼과 연결하는 역할.
-    const onSubmit = (data) => {
-        console.log(data)
+
+
+
+    const axiosfun = async (conecttypeinfo, data = null) => {
+        //post전송방식, get전송방식 모두 허용하는 비동기함수
+        const crudinfoarr = conecttypeinfo.split('/');
+        const tablenm = crudinfoarr[0];
+        console.log(tablenm, conecttypeinfo)
+
+        try {
+            if (data) {
+                await axios.post(`/${conecttypeinfo}`, data);
+            } else {
+                const selecttable = await axios.get(`/${conecttypeinfo}`);
+                setContent((prevContent) => ({
+                    ...prevContent,
+                    [tablenm]: [...selecttable.data],
+                }))
+            }
+        } catch (err) {
+            console.log(err);
+        }
     }
+
+    useEffect(() => {
+        // console.log(props.datasrc)
+        // axiosfun('practice'); //글목록
+        window.scrollTo(0, 0); // 페이지 이동 시 스크롤 위치를 맨 위로 이동
+
+    }, [])
+
+
+    const onSubmit = async (data) => {
+        console.log(data)
+        await axiosfun('/dada', data);
+        // axiosfun('practice')
+    }
+
     return (
         <div className='o_dada mt-150 mb-100'>
             <BigTitle>이달의 다다일상</BigTitle>
             <SmallTitle>오설록 티 소믈리에가 그달의 테마와 어울리는 차들을 선정하여 보내드립니다.<br />매월 향기로운 선물같은 일상을 선사합니다.</SmallTitle>
             <div className='row align-items-center container mx-auto'>
-                <ProductBox datasrc={props.datasrc.product} bestPage={'shop'} cardnum={4}></ProductBox>
+                <ProductBox datasrc={pickpro && pickpro} bestPage={'shop'} priceNone={'none'} cardnum={4}></ProductBox>
             </div>
             <SmallTitle>취향을 듬뿍담아 즐기기 좋은 티모음으로  구성되었습니다.<br />이달의 찻자리에 함께할 다다일상 구성을 만나보세요.</SmallTitle>
 
