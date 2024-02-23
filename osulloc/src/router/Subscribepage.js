@@ -3,55 +3,14 @@ import { BigTitle, SmallTitle } from '../styled/Title'
 import { GreenBtn } from '../styled/Btns'
 import ProductBox from '../component/ProductBox'
 import { Link, useLocation } from 'react-router-dom'
-import { useForm } from "react-hook-form"
-import axios from 'axios'
+import Form from './Form'
+
 
 
 function Subscribepage(props) {
     //상품필터링
     const pickpro = props.datasrc && props.datasrc.filter((items) => items.taplist_id === 9)
-    console.log(pickpro)
-
-    const [content, setContent] = useState(false);
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    //register 각각의 입력 필드를 폼과 연결하는 역할.
-
-
-
-    const axiosfun = async (conecttypeinfo, data = null) => {
-        //post전송방식, get전송방식 모두 허용하는 비동기함수
-        const crudinfoarr = conecttypeinfo.split('/');
-        const tablenm = crudinfoarr[0];
-        console.log(tablenm, conecttypeinfo)
-
-        try {
-            if (data) {
-                await axios.post(`/${conecttypeinfo}`, data);
-            } else {
-                const selecttable = await axios.get(`/${conecttypeinfo}`);
-                setContent((prevContent) => ({
-                    ...prevContent,
-                    [tablenm]: [...selecttable.data],
-                }))
-            }
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
-    useEffect(() => {
-        // console.log(props.datasrc)
-        // axiosfun('practice'); //글목록
-        window.scrollTo(0, 0); // 페이지 이동 시 스크롤 위치를 맨 위로 이동
-
-    }, [])
-
-
-    const onSubmit = async (data) => {
-        console.log(data)
-        await axiosfun('/dada', data);
-        // axiosfun('practice')
-    }
+    // console.log(pickpro)
 
     return (
         <div className='o_dada mt-150 mb-100'>
@@ -87,25 +46,7 @@ function Subscribepage(props) {
                                 소개하는 챌린지</span>
                         </div>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)} className='dadaform mx-auto'>
-                        <div className='m-2'>
-                            <input type="text" {...register("userName", { required: true })} placeholder='이름' className='border w-100 p-2' />
-                            {errors.userName && <p>이름을 입력하세요</p>}
-                        </div>
-                        <div className='m-2'>
-                            <input type="text" {...register("phone", { required: true })} placeholder='전화번호' className='border w-100 p-2' />
-                            {errors.phone && <p>전화번호를 입력하세요</p>}
-                        </div>
-                        <div className='m-2'>
-                            <input type="email" {...register("userEmail", { required: true })} placeholder='메일주소' className='border w-100 p-2' />
-                            {errors.userEmail && <p>메일주소를 입력하세요</p>}
-                        </div>
-                        <div className='m-2'>
-                            <textarea type="text"{...register("board", { required: false })} placeholder='문의사항' className='border w-100 p-2' />
-                        </div>
-                        <GreenBtn type='submit' className='mx-auto d-block mt-4 mb-5'>구독 신청하기</GreenBtn>
-                    </form>
-
+                    <Form></Form>
                 </div>
             </div>
             <div className='subscribe_dada container text-center mt-5'>

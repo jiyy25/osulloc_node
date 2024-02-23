@@ -46,7 +46,7 @@ function App() {
             "Content-Type": "application/json"
           }
         })
-
+     
         setData({
           swipe: swipeResponse.data,
           products: productsResponse.data,
