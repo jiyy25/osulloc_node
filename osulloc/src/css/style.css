@@ -988,13 +988,13 @@ footer .qnafooter .largeF {
   font-family: "GangwonEdu_OTFBoldA";
 }
 .brand h2 {
-  font-size: 2.5rem !important;
+  font-size: 3rem !important;
 }
 .brand > p {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
 }
 .brand > span {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 .brand .jejumap {
   width: 100%;
@@ -1012,26 +1012,46 @@ footer .qnafooter .largeF {
 .brand .jejuli .imgWrap img {
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 700px;
-}
-.brand .jejuli p {
-  font-size: 5rem;
-  padding: 30px;
-  font-family: "Pretendard-Regular";
-}
-.brand .jejuli p:hover {
-  color: #5A7E62;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
 }
 .brand .jejuli span {
+  font-size: 4rem;
   display: block;
+  padding-top: 2.2rem;
+  font-family: "Pretendard-Regular";
+}
+.brand .jejuli span:hover {
+  color: #5A7E62;
+}
+.brand .jejuli p {
   max-height: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.7s;
   font-size: 2rem;
   font-family: "Pretendard-Regular";
-  padding-left: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 1.8rem;
+  padding-top: 1rem;
 }
-.brand .jejuli:hover span {
+.brand .jejuli:hover p {
   max-height: 300px !important;
+  color: #5A7E62;
+}
+
+.history h3 {
+  font-size: 3rem;
+}
+.history > p {
+  font-size: 1.3rem;
+}
+.history img {
+  width: 95%;
+  margin: 1rem 0;
+}
+.history span {
+  font-size: 1.5rem;
+}
+.history .mySwiper .swiper-wrapper {
+  transition-timing-function: linear;
 }
