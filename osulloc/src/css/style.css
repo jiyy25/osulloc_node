@@ -148,7 +148,7 @@ header .backimg::after {
   display: block;
 }
 header .d2li {
-  position: relative;
+  margin-left: 0 !important;
 }
 header .before::before {
   content: "";
@@ -170,41 +170,41 @@ header .bnimg {
   display: block;
   position: absolute;
   width: 400px;
-  top: 120%;
-  left: 20%;
+  top: 220%;
+  right: 0;
   opacity: 0;
+  margin-right: 100px;
+}
+header .navmn:hover .bnimg {
+  max-height: 186.6px;
+  opacity: 1;
 }
 header .navmn li {
   margin: 15px;
-}
-header .navmn li:hover .bnimg {
-  max-height: 186.6px;
-  opacity: 1;
 }
 header .navmn li:hover .d1a {
   color: #6C801A;
 }
 header .navmn li .d2ul {
+  min-width: 150px;
   max-height: 0;
   overflow: hidden;
   left: 0;
   right: 0;
   top: 100%;
   transition: 0.5s;
-  margin-left: 50vw;
 }
 header .navmn li .d2ul:hover {
   overflow: visible;
 }
 header .navmn li .d2ul li {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-left: 0 !important;
+  text-align: left;
 }
 header .navmn li .d2ul li:hover a {
   color: #6C801A;
-}
-header .navmn li .d2ul li .d3ul li {
-  margin: auto 0;
 }
 header .before:hover .d2ul {
   max-height: 300px;
@@ -223,27 +223,16 @@ header .imgbnr {
   right: 0;
 }
 @media (max-width: 1400px) {
-  header .d2ul {
-    margin-left: 43vw !important;
-  }
   header .bnimg {
-    left: 15%;
-    width: 350px;
+    display: none !important;
   }
 }
-@media (max-width: 1200px) {
-  header .d2ul {
-    margin-left: 35vw !important;
-  }
+@media (min-width: 1700px) {
   header .bnimg {
-    left: 2%;
-    width: 350px;
+    margin-right: 280px !important;
   }
 }
 @media (max-width: 992px) {
-  header .d2ul {
-    max-height: unset !important;
-  }
   header .containerjy {
     --bs-gutter-x: 2rem;
   }
@@ -883,7 +872,7 @@ footer .qnafooter .largeF {
   margin: 1rem 0;
 }
 .o_event .imgur img {
-  width: 450px;
+  width: 300px;
 }
 .o_event .gotoPd {
   width: 320px;
@@ -922,16 +911,19 @@ footer .qnafooter .largeF {
 }
 
 .shopBest,
-.shop {
+.shop,
+.shopGift {
   margin-top: 76.8px;
   font-family: "Noto Sans KR", sans-serif;
 }
 .shopBest h2,
-.shop h2 {
+.shop h2,
+.shopGift h2 {
   font-weight: 600 !important;
 }
 .shopBest .back_img,
-.shop .back_img {
+.shop .back_img,
+.shopGift .back_img {
   width: 100%;
   height: 300px;
   background-size: cover;
@@ -939,12 +931,19 @@ footer .qnafooter .largeF {
   background-position: 50%;
 }
 .shopBest .bestnum,
-.shop .bestnum {
+.shop .bestnum,
+.shopGift .bestnum {
   width: 30px;
   height: 30px;
   display: block;
   background-color: #5A7E62;
   color: white;
+}
+.shopBest .productBox img,
+.shop .productBox img,
+.shopGift .productBox img {
+  width: 270px;
+  height: 270px;
 }
 
 .category li {

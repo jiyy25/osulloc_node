@@ -186,7 +186,7 @@ header {
     }
 
     .d2li {
-        position: relative;
+        margin-left: 0 !important;
     }
 
     .before {
@@ -214,21 +214,21 @@ header {
         display: block;
         position: absolute;
         width: 400px;
-        top: 120%;
-        left: 20%;
+        top: 220%;
+        right: 0;
         opacity: 0;
+        margin-right: 100px;
+
     }
 
     .navmn {
+        &:hover .bnimg {
+            max-height: 186.6px;
+            opacity: 1;
+        }
 
         li {
             margin: 15px;
-
-
-            &:hover .bnimg {
-                max-height: 186.6px;
-                opacity: 1;
-            }
 
             &:hover .d1a {
 
@@ -237,13 +237,13 @@ header {
             }
 
             .d2ul {
+                min-width: 150px;
                 max-height: 0;
                 overflow: hidden;
                 left: 0;
                 right: 0;
                 top: 100%;
                 transition: .5s;
-                margin-left: 50vw;
 
                 &:hover {
                     overflow: visible;
@@ -251,17 +251,14 @@ header {
 
                 li {
                     font-family: $krFont;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
+                    margin-left: 0 !important;
+                    text-align: left;
 
                     &:hover a {
                         color: #6C801A;
                     }
 
-                    .d3ul {
-                        li {
-                            margin: auto 0;
-                        }
-                    }
                 }
 
 
@@ -297,32 +294,20 @@ header {
 
     // 상단반응형
     @media (max-width: 1400px) {
-        .d2ul {
-            margin-left: 43vw !important;
+        .bnimg {
+            display: none !important;
         }
 
-        .bnimg {
-            left: 15%;
-            width: 350px;
-        }
     }
 
-    @media (max-width: 1200px) {
-        .d2ul {
-            margin-left: 35vw !important;
+    @media (min-width: 1700px) {
+        .bnimg {
+            margin-right: 280px !important;
         }
 
-        .bnimg {
-            left: 2%;
-            width: 350px;
-        }
     }
 
     @media (max-width: 992px) {
-
-        .d2ul {
-            max-height: unset !important;
-        }
 
         .containerjy {
             --bs-gutter-x: 2rem;
@@ -1177,7 +1162,7 @@ footer {
 
     .imgur {
         img {
-            width: 450px;
+            width: 300px;
         }
 
     }
@@ -1236,7 +1221,8 @@ footer {
 
 //shop_best
 .shopBest,
-.shop {
+.shop,
+.shopGift {
     margin-top: 76.8px;
     font-family: $krFont;
 
@@ -1260,6 +1246,12 @@ footer {
         color: white;
     }
 
+    .productBox {
+        img {
+            width: 270px;
+            height: 270px;
+        }
+    }
 
 }
 

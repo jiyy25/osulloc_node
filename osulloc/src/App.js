@@ -18,6 +18,7 @@ import Shop from "./router/Shop";
 import ShopBest from "./router/ShopBest";
 import Subscribepage from "./router/Subscribepage";
 import Brand from './router/Brand';
+import Gift from './router/Gift';
 
 function App() {
   const [data, setData] = useState({
@@ -92,6 +93,7 @@ function App() {
         {/* shop은 products와 category 테이블을 이용하여 카테로리 별로 필터링 */}
         <Route path="/dada" element={<Subscribepage datasrc={data.products && data.products}></Subscribepage>}></Route>
         <Route path="/brand" element={<Brand />}></Route>
+        <Route path='/gift' element={<Gift datasrc={data.products && data.products}></Gift>}></Route>
       </Routes>
       <Footer></Footer>
     </>

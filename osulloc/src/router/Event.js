@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom';
 import { BigTitle, SmallTitle } from '../styled/Title'
 import { GreenBtn } from '../styled/Btns';
 
@@ -104,7 +105,7 @@ function Event(props) {
                     <div className='gotoPd text-center'>
                         <span>프리미엄 말차</span>
                         <p className='mb-4'>23,000원</p>
-                        <a className='d-block border text-center p-3 mt-1 abtn' href="https://www.youtube.com/watch?v=QDiZUF4HE3A" target="_blank" rel="noopener noreferrer">상품보기</a>
+                        <Link to='/shop/2' className='d-block border text-center p-3 mt-1 abtn'>상품보기</Link>
                     </div>
                 </div>
             </div>

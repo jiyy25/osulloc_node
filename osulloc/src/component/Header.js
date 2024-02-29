@@ -60,14 +60,14 @@ function Header({ datasrc }) {
 
                 </h1>
                 <div className='d-lg-flex '>
-                    <ul className={`navmn d-lg-flex justify-content-between ${toggleOpen ? 'Bclick' : ''}`}>
-                        <li className='before '>
+                    <ul className={`navmn d-lg-flex before justify-content-between ${toggleOpen ? 'Bclick' : ''}`}>
+                        <li className='position-relative d1li px-2'>
                             <span href="" className='d1a' onClick={
                                 () => { toggleMenu("제품") }
                             }>제품</span>
-                            <Link to='/dada'> <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' /></Link >
+                            <Link to='/dada'> <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg d-none d-lg-block' /></Link >
 
-                            <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "제품" ? 'click' : ''}`}>
+                            <ul className={`d2ul position-absolute ${activeMenu === "제품" ? 'click' : ''}`}>
                                 <li className='d2li'><Link to='/Shop/best' className='d2a '>베스트</Link></li>
                                 {
                                     datasrc.filter((list) => list.category_id === list.parent_id).map((e, i) => <li><Link to={`/shop/${e.category_id}`} className='d2a'>{e.cate_title}</Link></li>)
@@ -76,30 +76,36 @@ function Header({ datasrc }) {
 
                             </ul>
                         </li>
-                        <li><span href="" className='d1a'>선물추천</span></li>
-                        <li className='before'>
+                        <li className='position-relative px-2' >
+                            <span href="" className='d1a'  onClick={() => { toggleMenu("선물추천") }}>선물추천</span >
+                            <ul className={`d2ul position-absolute ${activeMenu === "선물추천" ? 'click' : ''}`}>
+                                <li className='d2li'><Link to="/gift" className='d2a '>선물세트</Link></li>
+                            </ul>
+                        </li>
+
+                        <li className='position-relative px-2'>
                             <span href="" className='d1a' onClick={() => { toggleMenu("다다일상") }}>다다일상</span>
-                            <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
-                            <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "다다일상" ? 'click' : ''}`}>
-                                <li><Link to="/dada" className='d2a '>다다일상 구독</Link></li>
-                                <li><Link to="" className='d2a'>정기배송 신청</Link></li>
+                            {/* <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' /> */}
+                            <ul className={`d2ul position-absolute ${activeMenu === "다다일상" ? 'click' : ''}`}>
+                                <li className='d2li'><Link to="/dada" className='d2a '>다다일상 구독</Link></li>
+                                {/* <li><Link to="" className='d2a'>정기배송 신청</Link></li> */}
                             </ul>
                         </li>
-                        <li className='before'>
+                        <li className='position-relative px-2'>
                             <span href="" className='d1a' onClick={() => { toggleMenu("브랜드") }}>브랜드</span>
-                            <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
-                            <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "브랜드" ? 'click' : ''}`}>
-                                <li><Link to="/brand" className='d2a '>오설록 스토리</Link></li>
-                                <li><Link to="" className='d2a'>제주 티뮤지엄</Link></li>
-                                <li><Link to="" className='d2a'>매장 소개</Link></li>
+                            {/* <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' /> */}
+                            <ul className={`d2ul position-absolute ${activeMenu === "브랜드" ? 'click' : ''}`}>
+                                <li className='d2li'><Link to="/brand" className='d2a '>오설록 스토리</Link></li>
+                                {/* <li><Link to="" className='d2a'>제주 티뮤지엄</Link></li>
+                                <li><Link to="" className='d2a'>매장 소개</Link></li> */}
                             </ul>
                         </li>
-                        <li className='before'>
+                        <li className='position-relative px-2'>
                             <span className='d1a' onClick={() => { toggleMenu("이벤트") }}>이벤트</span>
-                            <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' />
-                            <ul className={`d2ul position-absolute d-lg-flex ${activeMenu === "이벤트" ? 'click' : ''}`}>
-                                <li><Link to="/event" className='d2a '>이달의 이벤트</Link></li>
-                                <li><Link to="#none" className='d2a'>이벤트 공지</Link></li>
+                            {/* <img src="./img/banner/dadaLightPc_1.jpg" alt="" className='bnimg' /> */}
+                            <ul className={`d2ul position-absolute ${activeMenu === "이벤트" ? 'click' : ''}`}>
+                                <li className='d2li'><Link to="/event" className='d2a '>이달의 이벤트</Link></li>
+                                {/* <li><Link to="#none" className='d2a'>이벤트 공지</Link></li> */}
                             </ul>
                         </li>
                     </ul>
