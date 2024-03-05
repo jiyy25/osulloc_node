@@ -16,6 +16,7 @@ mysqlapi.get('/:tablenm', (req, res) => {
         connect.query(`select * from ${tablenm}`, (error, result) => {
             if (error) throw console.log("쿼리문 오류")
             res.send(result)
+            connect.release(); //서버요청 성공하면 요청을 종료한다. 이렇게해야 서버가 죽지않음
         })
     })
 })
@@ -29,6 +30,7 @@ mysqlapi.get('/:tablenm/:id', (req, res) => {
         connect.query(`select * from ${tablenm} ${wheretable}`, (error, result) => {
             if (error) throw console.log("쿼리문 오류")
             res.send(result)
+            connect.release();
         })
     })
 })
