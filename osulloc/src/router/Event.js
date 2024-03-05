@@ -88,7 +88,7 @@ function Event(props) {
                     </div>
 
                     <div className='imgur'>
-                        <img src="https://i.ibb.co/qJsr8XL/CK-pc0031078294.jpg" alt="" />
+                        <img src="https://i.ibb.co/vhbrQWz/racipe.jpg" alt="" />
                         <a className='d-block border text-center p-3 mt-1 abtn' href="https://www.youtube.com/watch?v=QDiZUF4HE3A" target="_blank" rel="noopener noreferrer">유튜브에서 보기</a>
                     </div>
                 </div>
