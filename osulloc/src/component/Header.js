@@ -77,7 +77,7 @@ function Header({ datasrc }) {
                             </ul>
                         </li>
                         <li className='position-relative px-2' >
-                            <span href="" className='d1a'  onClick={() => { toggleMenu("선물추천") }}>선물추천</span >
+                            <span href="" className='d1a' onClick={() => { toggleMenu("선물추천") }}>선물추천</span >
                             <ul className={`d2ul position-absolute ${activeMenu === "선물추천" ? 'click' : ''}`}>
                                 <li className='d2li'><Link to="/gift" className='d2a '>선물세트</Link></li>
                             </ul>

@@ -18,7 +18,7 @@ function Form() {
                     'Content-Type': 'application/json'
                 },
                 body: data
-            }); 
+            });
             console.log("온거", formresponse);
             console.log("간거", data)
             alert('신청되었습니다!')
@@ -44,16 +44,17 @@ function Form() {
                 </div> :
                     <form onSubmit={handleSubmit(onSubmit)} className='dadaform mx-auto'>
                         <div className='m-2'>
-                            <input type="text" {...register("u_name", { required: true })} placeholder='이름' className='border w-100 p-2' />
-                            {errors.userName && <p>이름을 입력하세요</p>}
+                            <input type="text" placeholder='이름'  {...register("u_name", { required: true })} className='border w-100 p-2' />
+                            {errors.u_name && <p>이름을 입력하세요</p>}
                         </div>
                         <div className='m-2'>
-                            <input type="text" {...register("u_phone", { required: true })} placeholder='전화번호' className='border w-100 p-2' />
-                            {errors.phone && <p>전화번호를 입력하세요</p>}
+                            <input type="text" placeholder='전화번호' {...register("u_phone", { required: true })} className='border w-100 p-2' />
+                            {errors.u_phone && <p>전화번호를 입력하세요</p>}
                         </div>
+
                         <div className='m-2'>
                             <input type="email" {...register("u_email", { required: true })} placeholder='메일주소' className='border w-100 p-2' />
-                            {errors.userEmail && <p>메일주소를 입력하세요</p>}
+                            {errors.u_email && <p>메일주소를 입력하세요</p>}
                         </div>
                         <div className='m-2'>
                             <textarea type="text"{...register("board", { required: false })} placeholder='문의사항' className='border w-100 p-2' />
