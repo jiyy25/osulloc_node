@@ -15,7 +15,7 @@ function Subscribepage(props) {
     return (
         <div className='o_dada mt-150 mb-100'>
             <BigTitle>이달의 다다일상</BigTitle>
-            <SmallTitle className='dada_p'>오설록 티 소믈리에가 그달의 테마와 어울리는 차들을 선정하여 보내드립니다.<br />매월 향기로운 선물같은 일상을 선사합니다.</SmallTitle>
+            <SmallTitle className='dada_p'>오설록 티 소믈리에가 그달의 테마와 어울리는 <br className='d-sm-none'/>  차들을 선정하여 보내드립니다.<br />매월 향기로운 선물같은 일상을 선사합니다.</SmallTitle>
             <div className='bestProduct row justify-content-between align-items-center mt-5 mx-auto'>
                 <ProductBox datasrc={pickpro && pickpro} bestPage={'shop'} priceNone={'none'} cardnum={4}></ProductBox>
             </div>
