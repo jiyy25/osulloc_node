@@ -333,7 +333,7 @@ header {
             &.Bclick {
                 min-height: 500px;
                 padding: 5rem 2rem;
-                width: 50%;
+                width: 65%;
                 opacity: 1;
             }
 
@@ -972,7 +972,8 @@ footer {
     .osullocStory,
     .BestCategory,
     .OsllcocLocation,
-    .subscriptZone {
+    .subscriptZone,
+    .o_event {
         h2 {
             font-size: 30px;
         }
@@ -1007,6 +1008,49 @@ footer {
             font-size: 1.1rem !important;
         }
     }
+
+    //세부페이지
+    .o_dada {
+        .dada_p {
+            font-size: 20px !important;
+        }
+
+        .dadaicon {
+            width: 80px;
+            margin: 0.2rem;
+        }
+    }
+
+    .brand {
+        .titlep {
+            font-size: 25px;
+        }
+
+        .gido {
+            font-size: 30px;
+        }
+
+        .jejuul {
+            span {
+                font-size: 2.2rem !important;
+            }
+
+            p {
+                font-size: 1.3rem !important;
+            }
+        }
+    }
+
+    .history {
+        h3 {
+            font-size: 2.5rem !important;
+        }
+
+        >p {
+            font-size: 1.1rem !important;
+        }
+    }
+
 }
 
 
@@ -1031,11 +1075,11 @@ footer {
     .jyySwiper {
         .imgBox {
             strong {
-                font-size: 19px;
+                font-size: 18px !important;
             }
 
             p {
-                font-size: 15px;
+                font-size: 15px !important;
             }
         }
 
@@ -1122,6 +1166,11 @@ footer {
     .racipeArea,
     .togetherPd,
     .review {
+        h3 {
+            position: relative;
+            display: inline-block;
+        }
+
         h3::before {
             content: '';
             width: 20px;
@@ -1130,6 +1179,9 @@ footer {
             border-radius: 50%;
             display: block;
             margin-right: 0.5rem;
+            position: absolute;
+            right: 100%;
+            // top: 20%;
         }
 
         p {
@@ -1180,6 +1232,7 @@ footer {
     a.abtn {
         font-size: 1.2rem;
         transition: .5s;
+        width: 300px;
 
         &:hover {
             color: #6C801A;
@@ -1217,6 +1270,18 @@ footer {
             font-weight: 400;
         }
     }
+
+    @media (max-width:600px) {
+
+        .eventproduct {
+            width: 350px;
+        }
+
+        h3::before {
+            top: 18%;
+        }
+    }
+
 }
 
 //shop_best

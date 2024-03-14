@@ -16,17 +16,21 @@ function Event(props) {
     return (
         <div className='o_event mt-150 mb-100'>
             <BigTitle>오설록 이달의 챌린지</BigTitle>
-            <SmallTitle>오설록 프리미엄 말차 즐기는 법<br />
+            <SmallTitle className='smT '>오설록 프리미엄 말차 즐기는 법<br />
                 오설록을 더 알차게 즐기는 방법을 소개해주세요.</SmallTitle>
-            <div className='racipeArea container pt-5'>
-                <h3 className='d-flex align-items-center mb-2'>이달의 레시피</h3>
+            <div className='racipeArea container pt-5 text-center text-sm-start'>
+                <h3 className='d-sm-flex align-items-center mb-2 '>이달의 레시피</h3>
                 <p>세상 모든 커플의 사랑을 응원하는말차 판나코타</p>
-                <div className='d-flex align-items-center justify-content-between'>
-                    <div>
+                <div className='d-md-flex align-items-center justify-content-between '>
+                    <div className='imgur order-sm-2 text-center m-5 m-md-0'>
+                        <img src="https://i.ibb.co/vhbrQWz/racipe.jpg" alt="" />
+                        <a className='d-block border text-center p-3 mt-3 abtn mx-auto' href="https://www.youtube.com/watch?v=QDiZUF4HE3A" target="_blank" rel="noopener noreferrer">유튜브에서 보기</a>
+                    </div>
+                    <div className='order-sm-1'>
                         <div className='ingredients mt-4'>
-                            <div className='titleBox d-flex align-items-center'>
+                            <div className='titleBox d-sm-flex align-items-center'>
                                 <img className='eventIcon' src="/img/ico/icon_ingredient.png" alt="재료아이콘" />
-                                <span className='smT'>재료</span>
+                                <span className='smT m-0'>재료</span>
                                 <span className='mx-2 smTen'>INGREDIENTS</span>
                             </div>
                             <ul>
@@ -57,9 +61,9 @@ function Event(props) {
                             </ul>
                         </div>
                         <div className='racipe mt-5'>
-                            <div className='titleBox d-flex align-items-center'>
+                            <div className='titleBox d-md-flex align-items-center'>
                                 <img className='eventIcon' src="/img/ico/icon_recipe.png" alt="레시피아이콘" />
-                                <span className='smT'>레시피</span>
+                                <span className='smT m-0'>레시피</span>
                                 <span className='mx-2 smTen'>RECIPE</span>
                             </div>
                             <ul>
@@ -69,7 +73,7 @@ function Event(props) {
                                 </li>
                                 <li>
                                     <span class="number">STEP 2</span>
-                                    <p>불린 젤라틴을 생크림 100ml, 우유 100ml, 바닐라 빈 1/2개, 설탕 1Tsp과 함께 가열해줍니다.<br />(가열 후에는 바닐라 향이 잘 스미도록 5분간 방치해 두세요.)</p>
+                                    <p>불린 젤라틴을 생크림 100ml, 우유 100ml, <br className='d-sm-none'/> 바닐라 빈 1/2개, 설탕 1Tsp과 함께 가열해줍니다.<br />(가열 후에는 바닐라 향이 잘 스미도록 5분간 방치해 두세요.)</p>
                                 </li>
                                 <li>
                                     <span class="number">STEP 3</span>
@@ -87,25 +91,22 @@ function Event(props) {
                         </div>
                     </div>
 
-                    <div className='imgur'>
-                        <img src="https://i.ibb.co/vhbrQWz/racipe.jpg" alt="" />
-                        <a className='d-block border text-center p-3 mt-1 abtn' href="https://www.youtube.com/watch?v=QDiZUF4HE3A" target="_blank" rel="noopener noreferrer">유튜브에서 보기</a>
-                    </div>
+
                 </div>
 
             </div>
             <div className='togetherPd container mt-5'>
                 <div className='titleBox d-flex align-items-center pt-5'>
                     <img className='eventIcon' src="/img/ico/icon_related_product.png" alt="티백아이콘" />
-                    <span className='smT'>함께한 제품</span>
+                    <span className='smT m-0'>함께한 제품</span>
                     <span className='mx-2 smTen'>RELATED PRODUCT</span>
                 </div>
-                <div className='d-flex align-items-center justify-content-center'>
-                    <img src="/img/sub/recipe_11_related_prd.png" alt="" />
-                    <div className='gotoPd text-center'>
+                <div className='d-sm-flex align-items-center justify-content-center'>
+                    <img src="/img/sub/recipe_11_related_prd.png" alt="프리미엄 말차" className='mx-auto eventproduct d-flex justify-content-center' />
+                    <div className='gotoPd text-center mx-auto'>
                         <span>프리미엄 말차</span>
                         <p className='mb-4'>23,000원</p>
-                        <Link to='/shop/2' className='d-block border text-center p-3 mt-1 abtn'>상품보기</Link>
+                        <Link to='/shop/2' className='d-block border text-center p-3 mt-1 abtn mx-auto'>상품보기</Link>
                     </div>
                 </div>
             </div>
@@ -113,7 +114,7 @@ function Event(props) {
             <div className='review container mt-5'>
                 <div className='titleBox d-flex align-items-center pt-5'>
                     <img className='reveiwIcon mx-3' src="/img/ico/ic_write_black_pc.svg" alt="참여 아이콘" />
-                    <span className='smT'>챌린지 참여하기</span>
+                    <span className='smT m-0'>챌린지 참여하기</span>
                 </div>
             </div>
 

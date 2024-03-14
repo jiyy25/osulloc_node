@@ -27,10 +27,12 @@ function Header({ datasrc }) {
 
 
     React.useEffect(() => {
+
         const hdobj = document.querySelector("header");
         const scrollhead = () => {
             if (window.scrollY > 80) {
                 hdobj.classList.add("bg-white")
+                setToggleOpen(false) //스크롤을 하면 메뉴가 사라짐..!
             } else {
                 hdobj.classList.remove("bg-white")
             }

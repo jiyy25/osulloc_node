@@ -32,14 +32,14 @@ function Brand() {
     };
 
     return (
-        <div className='brand container mt-150 text' onMouseMove={handleMouseMove}>
+        <div className='brand container mt-150 text' >
             <h2 className='text-center mb-4' data-aos="zoom-in">TEA FROM JEJU</h2>
-            <p className='text-center mb-4' data-aos="zoom-in">대한민국이 가진 천혜의 자연 유산 제주,<br />
+            <p className='text-center mb-4 titlep' data-aos="zoom-in">대한민국이 가진 천혜의 자연 유산 제주,<br />
                 화산섬 제주가 가진 경이로운 생명력으로<br />
                 오설록의 차는 탄생합니다.</p>
-            <span className='text-center d-block mb-5' data-aos="zoom-in">오설록의 제주 차밭</span>
+            <span className='text-center d-block mb-5 gido' data-aos="zoom-in">오설록의 제주 차밭</span>
             <img src="https://i.ibb.co/8xJLzcV/tea-field.png" alt="제주지도" className='jejumap mb-5 p-5' data-aos="zoom-in-up" />
-            <ul className='jejuul position-relative mt-5 mb-5 pb-5'>
+            <ul className='jejuul position-relative mt-5 mb-5 pb-5' onMouseMove={handleMouseMove}>
                 <li className='jejuli' onMouseOver={() => handleMouseOver(0)} onMouseLeave={() => handleMouseLeave(0)} data-aos="fade-right">
                     <span>색이 좋은 서광 차밭</span>
                     <p>산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육조건이 됩니다.</p>

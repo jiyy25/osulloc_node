@@ -254,7 +254,7 @@ header .imgbnr {
   header .navmn.Bclick {
     min-height: 500px;
     padding: 5rem 2rem;
-    width: 50%;
+    width: 65%;
     opacity: 1;
   }
   header .navmn .d2ul {
@@ -725,7 +725,8 @@ footer .qnafooter .largeF {
   .osullocStory h2,
   .BestCategory h2,
   .OsllcocLocation h2,
-  .subscriptZone h2 {
+  .subscriptZone h2,
+  .o_event h2 {
     font-size: 30px;
   }
   .videoZone .smT,
@@ -733,7 +734,8 @@ footer .qnafooter .largeF {
   .osullocStory .smT,
   .BestCategory .smT,
   .OsllcocLocation .smT,
-  .subscriptZone .smT {
+  .subscriptZone .smT,
+  .o_event .smT {
     font-size: 20px;
     margin: 1.5rem;
   }
@@ -754,6 +756,31 @@ footer .qnafooter .largeF {
   .BestCategory a {
     font-size: 1.1rem !important;
   }
+  .o_dada .dada_p {
+    font-size: 20px !important;
+  }
+  .o_dada .dadaicon {
+    width: 80px;
+    margin: 0.2rem;
+  }
+  .brand .titlep {
+    font-size: 25px;
+  }
+  .brand .gido {
+    font-size: 30px;
+  }
+  .brand .jejuul span {
+    font-size: 2.2rem !important;
+  }
+  .brand .jejuul p {
+    font-size: 1.3rem !important;
+  }
+  .history h3 {
+    font-size: 2.5rem !important;
+  }
+  .history > p {
+    font-size: 1.1rem !important;
+  }
 }
 @media (max-width: 450px) {
   .BestCategory,
@@ -770,10 +797,10 @@ footer .qnafooter .largeF {
     margin-top: 70px !important;
   }
   .jyySwiper .imgBox strong {
-    font-size: 19px;
+    font-size: 18px !important;
   }
   .jyySwiper .imgBox p {
-    font-size: 15px;
+    font-size: 15px !important;
   }
   .jyySwiper .moreBtn {
     margin: unset !important;
@@ -827,6 +854,12 @@ footer .qnafooter .largeF {
 .o_event .eventIcon {
   width: 60px;
 }
+.o_event .racipeArea h3,
+.o_event .togetherPd h3,
+.o_event .review h3 {
+  position: relative;
+  display: inline-block;
+}
 .o_event .racipeArea h3::before,
 .o_event .togetherPd h3::before,
 .o_event .review h3::before {
@@ -837,6 +870,8 @@ footer .qnafooter .largeF {
   border-radius: 50%;
   display: block;
   margin-right: 0.5rem;
+  position: absolute;
+  right: 100%;
 }
 .o_event .racipeArea p,
 .o_event .togetherPd p,
@@ -885,6 +920,7 @@ footer .qnafooter .largeF {
 .o_event a.abtn {
   font-size: 1.2rem;
   transition: 0.5s;
+  width: 300px;
 }
 .o_event a.abtn:hover {
   color: #6C801A;
@@ -908,6 +944,14 @@ footer .qnafooter .largeF {
 .o_event .reviewSwiper strong {
   font-size: 1.2rem;
   font-weight: 400;
+}
+@media (max-width: 600px) {
+  .o_event .eventproduct {
+    width: 350px;
+  }
+  .o_event h3::before {
+    top: 18%;
+  }
 }
 
 .shopBest,
