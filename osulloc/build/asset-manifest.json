@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c79b04ac.css",
-    "main.js": "/static/js/main.9338c815.js",
+    "main.css": "/static/css/main.84814448.css",
+    "main.js": "/static/js/main.5c185d6c.js",
     "static/media/mobile0.png": "/static/media/mobile0.2273fe9442884fd6fadf.png",
     "static/media/osulloc22.jpg": "/static/media/osulloc22.4f992291c2e104b38a9a.jpg",
     "static/media/osulloc25.png": "/static/media/osulloc25.a1b1541cc950fc7f0522.png",
@@ -755,11 +755,11 @@
     "static/media/noto-sans-kr-latin-ext-300-normal.woff2": "/static/media/noto-sans-kr-latin-ext-300-normal.533badfc3e7fbba074c2.woff2",
     "static/media/noto-sans-kr-latin-ext-200-normal.woff2": "/static/media/noto-sans-kr-latin-ext-200-normal.9f249e7ce3ce8d448b13.woff2",
     "index.html": "/index.html",
-    "main.c79b04ac.css.map": "/static/css/main.c79b04ac.css.map",
-    "main.9338c815.js.map": "/static/js/main.9338c815.js.map"
+    "main.84814448.css.map": "/static/css/main.84814448.css.map",
+    "main.5c185d6c.js.map": "/static/js/main.5c185d6c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c79b04ac.css",
-    "static/js/main.9338c815.js"
+    "static/css/main.84814448.css",
+    "static/js/main.5c185d6c.js"
   ]
 }

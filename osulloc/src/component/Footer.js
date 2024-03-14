@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <footer className='bg-dark pt-5 pb-4 px-5 '>
-            <div className='container d-lg-flex align-items-start justify-content-between'>
+            <div className='containerjy d-lg-flex align-items-start justify-content-around p-0'>
                 <div className='f_logo d-none d-lg-block col-1'>
                     <Link to='/'></Link>
-                    <img src="/img/logo/osulloc23.png" alt="" />
+                    <img src="/img/logo/osulloc23.png" alt="푸터로고"/>
                 </div>
-                <div className='d-flex order-lg-2 mb-3 mb-lg-0 qnafooter'>
+                <div className='d-md-flex order-lg-2 mb-3 mb-lg-0 qnafooter d-none d-md-block '>
                     <div className='help me-3'>
                         <span>
                             고객상담센터 · 주문/배송문의
@@ -32,11 +32,10 @@ function Footer() {
                 </div>
 
                 <div className='leftDesc order-lg-1'>
-                    <ul className='d-flex mb-3 flex-wrap'>
+                    <ul className='d-flex mb-3 flex-wrap justify-content-center'>
                         <li className='ms-0'><Link to=''>회사소개</Link></li>
                         <li><Link to=''>서비스 이용약관</Link></li>
                         <li><Link to=''>개인정보 처리방침</Link></li>
-                        <li className='d-sm-none'><br /></li>
                         <li><Link to='' className=''><strong className='d-block'>영상정보 처리방침</strong></Link></li>
                         <li><Link to=''>뷰티포인트</Link></li>
                         <li><Link to=''>임직원할인</Link></li>

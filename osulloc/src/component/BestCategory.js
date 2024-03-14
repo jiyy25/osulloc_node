@@ -38,7 +38,7 @@ function BestCategory() {
                         <strong>설 리미티드 에디션 <br className='d-lg-none' />보자기 포장 선물 세트</strong>
                         <p>마스터의 블렌딩으로 탄생한 오설록만의 <br />제주의 향기를 담은 대표 블렌디드 티 모음 세트<br />
                             설 리미티드 티 세트로따뜻한 마음을 전해보세요.</p>
-                        <Link to="/shop">더보기</Link>
+                        <Link to="/gift">더보기</Link>
                     </div>
                 </div>
 

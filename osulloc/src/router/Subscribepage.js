@@ -16,7 +16,7 @@ function Subscribepage(props) {
         <div className='o_dada mt-150 mb-100'>
             <BigTitle>이달의 다다일상</BigTitle>
             <SmallTitle className='dada_p'>오설록 티 소믈리에가 그달의 테마와 어울리는 차들을 선정하여 보내드립니다.<br />매월 향기로운 선물같은 일상을 선사합니다.</SmallTitle>
-            <div className='bestProduct row justify-content-between align-items-center'>
+            <div className='bestProduct row justify-content-between align-items-center mt-5 mx-auto'>
                 <ProductBox datasrc={pickpro && pickpro} bestPage={'shop'} priceNone={'none'} cardnum={4}></ProductBox>
             </div>
             <SmallTitle className='dada_p'>취향을 듬뿍담아 즐기기 좋은 <br className='d-sm-none' /> 티모음으로 구성되었습니다.<br />이달의 찻자리에 함께할 <br className='d-sm-none' /> 다다일상 구성을 만나보세요.</SmallTitle>

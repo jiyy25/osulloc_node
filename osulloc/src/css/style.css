@@ -769,6 +769,9 @@ footer .qnafooter .largeF {
   .brand .gido {
     font-size: 30px;
   }
+  .brand .jejuul {
+    overflow: hidden;
+  }
   .brand .jejuul span {
     font-size: 2.2rem !important;
   }
