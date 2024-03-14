@@ -17,13 +17,13 @@ function Event(props) {
         <div className='o_event mt-150 mb-100'>
             <BigTitle>오설록 이달의 챌린지</BigTitle>
             <SmallTitle className='smT '>오설록 프리미엄 말차 즐기는 법<br />
-                오설록을 더 알차게 즐기는 방법을 소개해주세요.</SmallTitle>
+                오설록을 더 알차게 즐기는 <br className='d-sm-none'/> 방법을 소개해주세요.</SmallTitle>
             <div className='racipeArea container pt-5 text-center text-sm-start'>
                 <h3 className='d-sm-flex align-items-center mb-2 '>이달의 레시피</h3>
                 <p>세상 모든 커플의 사랑을 응원하는말차 판나코타</p>
                 <div className='d-md-flex align-items-center justify-content-between '>
-                    <div className='imgur order-sm-2 text-center m-5 m-md-0'>
-                        <img src="https://i.ibb.co/vhbrQWz/racipe.jpg" alt="" />
+                    <div className='imgur order-sm-2 text-center m-5 m-md-0 mx-auto'>
+                        <img src="https://i.ibb.co/vhbrQWz/racipe.jpg" alt="이벤트 음료" />
                         <a className='d-block border text-center p-3 mt-3 abtn mx-auto' href="https://www.youtube.com/watch?v=QDiZUF4HE3A" target="_blank" rel="noopener noreferrer">유튜브에서 보기</a>
                     </div>
                     <div className='order-sm-1'>

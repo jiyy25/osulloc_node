@@ -726,7 +726,8 @@ footer .qnafooter .largeF {
   .BestCategory h2,
   .OsllcocLocation h2,
   .subscriptZone h2,
-  .o_event h2 {
+  .o_event h2,
+  .shopGift h2 {
     font-size: 30px;
   }
   .videoZone .smT,
@@ -735,8 +736,9 @@ footer .qnafooter .largeF {
   .BestCategory .smT,
   .OsllcocLocation .smT,
   .subscriptZone .smT,
-  .o_event .smT {
-    font-size: 20px;
+  .o_event .smT,
+  .shopGift .smT {
+    font-size: 20px !important;
     margin: 1.5rem;
   }
   .OsllcocLocation strong,
@@ -820,7 +822,7 @@ footer .qnafooter .largeF {
   .osullocStory .smT,
   .BestCategory .smT,
   .subscriptZone .smT {
-    font-size: 17px;
+    font-size: 17px !important;
     margin: 1rem !important;
   }
   .BestSeller .bestProduct .productBox {
@@ -928,6 +930,12 @@ footer .qnafooter .largeF {
 .o_event a.abtn:hover {
   color: #6C801A;
   border-color: #6C801A !important;
+}
+.o_event .racipe .number {
+  font-weight: 500;
+}
+.o_event .racipe p {
+  font-weight: 300;
 }
 .o_event .review .reveiwIcon {
   width: 40px;

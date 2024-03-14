@@ -973,13 +973,14 @@ footer {
     .BestCategory,
     .OsllcocLocation,
     .subscriptZone,
-    .o_event {
+    .o_event,
+    .shopGift {
         h2 {
             font-size: 30px;
         }
 
         .smT {
-            font-size: 20px;
+            font-size: 20px !important;
             margin: 1.5rem;
         }
     }
@@ -1032,6 +1033,7 @@ footer {
 
         .jejuul {
             overflow: hidden;
+
             span {
                 font-size: 2.2rem !important;
             }
@@ -1099,7 +1101,7 @@ footer {
         }
 
         .smT {
-            font-size: 17px;
+            font-size: 17px !important;
             margin: 1rem !important;
         }
     }
@@ -1238,6 +1240,15 @@ footer {
         &:hover {
             color: #6C801A;
             border-color: #6C801A !important;
+        }
+    }
+    .racipe{
+        .number{
+            font-weight: 500;
+        }
+
+        p{
+            font-weight: 300;
         }
     }
 

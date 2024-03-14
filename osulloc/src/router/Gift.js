@@ -15,7 +15,7 @@ function Gift(props) {
             </div>
             <div className='shop_productList mt-5 pt-5 container'>
                 <H3Title>선물이 고민될 때</H3Title>
-                <SmallTitle>예쁜 패키지의 오설록 선물 세트 어때요?</SmallTitle>
+                <SmallTitle className='smT'>예쁜 패키지의 오설록 선물 세트 <br className='d-sm-none'/>어때요?</SmallTitle>
                 <div className='bestProduct row justify-content-between align-items-center'>
                     <ProductBox datasrc={pickgift && pickgift} cardnum={cardnum.current} bestPage={'gift'}></ProductBox>
                 </div>

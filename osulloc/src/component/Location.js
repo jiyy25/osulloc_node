@@ -24,7 +24,7 @@ function Location(props) {
     return (
         <div className='OsllcocLocation mb-100 container'>
             <BigTitle>매장소개</BigTitle>
-            <SmallTitle className='smT'>오프라인 매장에서 다채로운 오설록을 경험하세요.</SmallTitle>
+            <SmallTitle className='smT'>오프라인 매장에서 다채로운<br className='d-sm-none'/> 오설록을 경험하세요.</SmallTitle>
             <div className='locationSwiper mb-5 position-relative'>
                 <Swiper
                     pagination={
